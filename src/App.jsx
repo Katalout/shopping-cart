@@ -5,12 +5,13 @@ import Navbar from "./Components/Navbar/Navbar.jsx";
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cartCount, setCartCount] = useState(0);
+
 
   return (
     <>
-      <Navbar />
-      <Outlet />
+      <Navbar cartCount={cartCount} />
+      <Outlet context={[cartCount, setCartCount]} />
     </>)
 }
 

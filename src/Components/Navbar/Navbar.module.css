@@ -4,3 +4,9 @@
     justify-content: center;
     gap: 20px;
 }
+
+.cartCount {
+    background-color: rgb(255, 235, 15);
+    border-radius: 5px;
+    padding: 0 0.25em;
+}
