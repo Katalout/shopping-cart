@@ -2,21 +2,15 @@ import { Link } from "react-router";
 import styles from "./Navbar.module.css"
 import { useState } from "react";
 
-export default function Navbar({ cartCount }) {
+export default function Navbar({ cart }) {
+    //calculate itemscount
+    function countItems() {
+        let count = 0;
+        Object.values(cart).forEach(item => count += item.count);
+        return count;
+    }
 
-    /* 
-    trigger animation on statechange? or can i just use good ol' addeventhandler in a separate, global js file? does it see in the components? wtffff??
-    
-    const [prevCount, setPrevCount] = useState(cartCount);
-      const [trend, setTrend] = useState(null);
-      if (prevCount !== cartCount) {
-        setPrevCount(cartCount);
-        setTrend(count > prevCount ? 'increasing' : 'decreasing');
-      }
-    
-    function nudge(){
-    
-    } */
+    let cartCount = countItems();
 
     return (
         <nav>
@@ -28,7 +22,7 @@ export default function Navbar({ cartCount }) {
                     <Link to="shopping">Shopping</Link>
                 </li>
                 <li>
-                    <Link to="cart">Cart <span className={styles.cartCount}>{cartCount > 0 && cartCount}</span></Link>
+                    <Link to="cart">Cart {cartCount > 0 && <span className={styles.cartCount}>{cartCount}</span>}</Link>
                 </li>
             </ul>
         </nav>
