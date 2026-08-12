@@ -12,11 +12,18 @@ export default function Card({ data }) {
         else newCart[id] = { ...item, count: 1 };
         setCart(newCart);
     }
+    const removeItemFromCart = (item) => () => {
+        let id = item.id;
+        let newCart = { ...cart };
+        if (newCart[id].count > 1) newCart[id].count--
+        else delete newCart[id];
+        setCart(newCart);
+    }
 
     return <div className={styles.card} >
         <h3>{data.name}</h3>
         <p>{data.price} peták</p>
-        <button onClick="">-</button><button onClick={addItemToCart(data)}>+</button>
+        {count && <button onClick={removeItemFromCart(data)}>-</button>}<button onClick={addItemToCart(data)}>+</button>
         {count && <p>in cart: {count}</p>}
     </div>
 }
