@@ -1,6 +1,21 @@
 .card {
     background-color: beige;
     border-radius: 10px;
-    width: 100px;
-    height: 150px;
+    width: 200px;
+}
+
+.input {
+    width: 3ch;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.input[type=number] {
+    -moz-appearance: textfield;
 }
