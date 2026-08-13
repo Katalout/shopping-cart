@@ -7,7 +7,7 @@ export default function Shopping() {
     return (
         <>
             <h2>Shopping page</h2>
-            <div className={styles.cardContainer}>{data.map(item => <Card key={item.id} data={item} />)}
+            <div className={styles.cardContainer}>{data.map(item => <Card key={item.id} data={item} inCart={false} />)}
             </div>
         </>
     )

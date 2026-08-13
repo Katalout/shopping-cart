@@ -1,0 +1,4 @@
+.cartContainer {
+    display: flex;
+    flex-direction: column;
+}
