@@ -2,6 +2,26 @@
     background-color: beige;
     border-radius: 10px;
     width: 200px;
+
+}
+
+.imgwrapper {
+    margin: 10px auto;
+    width: 180px;
+    height: 250px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.imgwrapper img {
+    width: 160px;
+    max-height: 240px;
+    object-fit: contain;
+    /* hmm but looks like it isnt positioned against the wrapper */
+    object-position: center;
 }
 
 .cartCard {
