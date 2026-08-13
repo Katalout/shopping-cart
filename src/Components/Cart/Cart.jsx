@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 import styles from "./Cart.module.css";
 
 export default function Cart() {
-    const [cart, setCart] = useOutletContext();
+    const { cart, setCart } = useOutletContext();
     const cartArray = Object.values(cart);
     return (
         <>
