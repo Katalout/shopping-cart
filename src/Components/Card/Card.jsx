@@ -45,6 +45,7 @@ export default function Card({ data, inCart }) {
     if (inCart) return (
         <div className={styles.cartCard}>
             <div className="left">
+                <div className={styles.imgwrapper}><img src={data.image} alt="" /></div>
                 <h3>{data.name}</h3>
                 <p>{data.price} peták/pcs</p>
             </div>
@@ -56,6 +57,7 @@ export default function Card({ data, inCart }) {
     else
         return (
             <div className={styles.card} >
+                <div className={styles.imgwrapper}><img src={data.image} alt="" /></div>
                 <h3>{data.name}</h3>
                 <p>{data.price} peták</p>
                 <label htmlFor={data.id}>Item counter: </label><button onClick={decrementVal}>-</button><input ref={input} className={styles.input} type="number" name="count" id={data.id} onChange={onChange} value={inputVal} />
