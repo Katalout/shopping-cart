@@ -183,3 +183,22 @@
   }
 }
  */
+
+.animation {
+  display: inline-block;
+  animation: nudge 1000ms;
+}
+
+@keyframes nudge {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.2)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
