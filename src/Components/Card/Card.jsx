@@ -3,7 +3,7 @@ import { useOutletContext } from "react-router";
 import { useRef, useState } from "react";
 
 export default function Card({ data, inCart }) {
-    const { cart, setCart, nudge } = useOutletContext();
+    const { cart, setCart } = useOutletContext();
     const count = cart[data.id] ? cart[data.id].count : null;
     const input = useRef(null);
     const [inputVal, setInputVal] = useState('');
@@ -29,7 +29,6 @@ export default function Card({ data, inCart }) {
             else newCart[id] = { ...item, count: current };
             setCart(newCart);
             setInputVal("");
-            nudge();
         }
     }
     const removeItemFromCart = (item) => () => {

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "react": "^19.2.8",
+    "react-animate-on-change": "^2.2.0",
     "react-dom": "^19.2.8",
     "react-router": "^8.3.0"
   },
