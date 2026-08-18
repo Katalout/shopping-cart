@@ -1,0 +1,25 @@
+.hero {
+    position: relative;
+}
+
+.heroImg {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.heroText {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: white;
+    width: 40%;
+}
+
+.textOnImg {
+    font-size: x-large;
+
+}
+
+.textOnImg2 {}

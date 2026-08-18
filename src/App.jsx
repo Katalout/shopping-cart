@@ -14,7 +14,9 @@ function App() {
     <>
       <Header />
       <Navbar cart={cart} />
-      <Outlet context={{ cart, setCart, products, error, loading }} />
+      <main>
+        <Outlet context={{ cart, setCart, products, error, loading }} />
+      </main>
     </>)
 }
 
