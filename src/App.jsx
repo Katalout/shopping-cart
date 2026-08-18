@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { Outlet } from "react-router";
 import './App.css';
 import Navbar from "./Components/Navbar/Navbar.jsx";
+import Header from './Components/Header/Header.jsx';
 import { data, useProducts } from "./Components/utility.js";
 
 
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <Navbar cart={cart} />
       <Outlet context={{ cart, setCart, products, error, loading }} />
     </>)
