@@ -1,8 +1,9 @@
 import { Link } from "react-router";
 import styles from "./Navbar.module.css"
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import AnimateThis from "../AnimateThis/AnimateThis";
 
-export default function Navbar({ cart, ref }) {
+export default function Navbar({ cart }) {
     function countItems() {
         let count = 0;
         Object.values(cart).forEach(item => count += item.count);
@@ -10,15 +11,6 @@ export default function Navbar({ cart, ref }) {
     }
 
     let cartCount = countItems();
-
-    const counter = useRef(null);
-
-    const [animation, setAnimation] = useState(false);
-
-    //calculate itemscount
-
-
-
 
     return (
         <nav>
@@ -31,8 +23,7 @@ export default function Navbar({ cart, ref }) {
                 </li>
                 <li>
                     <Link to="cart">Cart
-                        <span ref={ref} className={styles.cartCount} >
-                            {cartCount > 0 && cartCount}</span>
+                        {cartCount > 0 && <AnimateThis content={cartCount} />}
                     </Link>
                 </li>
             </ul>
