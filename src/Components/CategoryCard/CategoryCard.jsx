@@ -5,6 +5,7 @@ function CategoryCard({ title, img }) {
         <div className={styles.card}>
             <img className={styles.cardImg} src={img} alt="" />
             <h3 className={styles.title}>{title}</h3>
+            <div className={styles.overlay}></div>
         </div>
     )
 }
