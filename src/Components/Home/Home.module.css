@@ -1,12 +1,19 @@
 .hero {
     position: relative;
+    height: 40vh;
 }
 
 .heroImg {
     width: 100%;
-    height: 50vh;
+    height: 100%;
     object-fit: cover;
     opacity: 0.8;
+}
+
+.overlay {
+    position: absolute;
+    background-image: linear-gradient(to left, #cde9cd1c 10%, #00000000 50%, #876d6d8c);
+    inset: 0;
 }
 
 .heroText {
@@ -22,4 +29,10 @@
 
 }
 
-.textOnImg2 {}
+.textOnImg2 {
+    margin-top: 1em;
+}
+
+.cardWrapper {
+    display: flex;
+}

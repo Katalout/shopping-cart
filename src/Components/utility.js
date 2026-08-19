@@ -16,16 +16,19 @@ export const useProducts = () => {
             .then((data) => {
                 console.log(data);
                 let emez = [];
-                for (let index = 0; index < 10; index++) {
+                for (let index = 0; index < 20; index++) {
                     const item = data[index];
                     //name, price, id
-                    let { id, title: name, price, image } = item;
-                    emez.push({ id, name, price, image });
+                    let { id, title: name, price, image, category } = item;
+                    emez.push({ id, name, price, image, category });
                 }
                 //create object of 10 products
                 setProducts(emez)
             })
-            .catch((error) => setError(error))
+            .catch((error) => {
+                console.log(error);
+                setError(error)
+            })
             .finally(() => setLoading(false));
     }, []);
     return { products, error, loading };

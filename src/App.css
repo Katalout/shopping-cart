@@ -13,6 +13,7 @@ ul,
 body,
 h1,
 h2,
+h3,
 p {
   margin: 0;
   padding: 0;
@@ -51,6 +52,7 @@ nav {
   top: 0;
   background-color: whitesmoke;
   padding: 8px;
+  z-index: 1;
 
   & a {
     text-transform: uppercase;
