@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import styles from "./Navbar.module.css"
 import { useState, useEffect } from "react";
 import AnimateThis from "../AnimateThis/AnimateThis";
+import search from "../../assets/search.png";
 
 export default function Navbar({ cart }) {
     function countItems() {
@@ -14,6 +15,7 @@ export default function Navbar({ cart }) {
 
     return (
         <nav>
+            <h1><Link to="/">Brand</Link></h1>
             <ul className={styles.nav}>
                 <li>
                     <Link to="/">Home</Link>
@@ -27,6 +29,7 @@ export default function Navbar({ cart }) {
                     </Link>
                 </li>
             </ul>
+            <img src={search} alt="search" />
         </nav>
     )
 }

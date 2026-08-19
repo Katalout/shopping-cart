@@ -38,3 +38,27 @@
     gap: 1rem;
     padding: 1rem;
 }
+
+.sectionLabel {
+
+    letter-spacing: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.sectionLabel::before,
+.sectionLabel::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 2rem;
+    background-color: green;
+}
+
+.sectionTitle {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}

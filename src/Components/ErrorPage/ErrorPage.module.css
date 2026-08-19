@@ -1,0 +1,23 @@
+.wrapper {
+    background-color: aliceblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.wrapper>* {
+    transform: translateY(-2rem);
+}
+
+.wrapper a {
+    background-color: rgb(173, 207, 196);
+    border-radius: 100px;
+    padding: 1em 1.5em;
+}
+
+.label {
+    color: green;
+}
