@@ -20,18 +20,18 @@ export default function Home() {
                     <p className={styles.textOnImg2}>Exciting new collection from our designers, limited availability</p>
                 </div>
             </div>
-            <section>
-                <p>What we offer</p>
-                <h2>Shop by category</h2>
+            <section className="categories">
+                <p className={styles.sectionLabel}>What we offer</p>
+                <h2 className={styles.sectionTitle}>Shop by category</h2>
                 <div className={styles.cardWrapper}>
                     <CategoryCard title="clothing" img={clothes} />
                     <CategoryCard title="jewellery" img={jewellery} />
                     <CategoryCard title="electronics" img={electronics} />
                 </div>
             </section>
-            <section>
-                <p>Why us?</p>
-                <h2>Designed to spark joy and last a lifetime</h2>
+            <section className="whyus">
+                <p className={styles.sectionLabel}>Why us?</p>
+                <h2 className={styles.sectionTitle}>Designed to spark joy and last a lifetime</h2>
             </section>
         </>)
 }

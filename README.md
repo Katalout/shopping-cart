@@ -9,3 +9,5 @@ jewellery Photo by <a href="https://unsplash.com/@olaszkolda?utm_source=unsplash
 megoldando: 
 -a hero img ne vagja le a csavo fejit szelesvasznon
 -a category hovernél a feliratra hoverelve kene aztat nyilazni or smth (ne legyen elterö a siman kepre hoverelezesnel i guess)
+-page not found page
+-title to show in browser
