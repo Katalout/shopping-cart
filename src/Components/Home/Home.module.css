@@ -1,6 +1,28 @@
 .hero {
     position: relative;
     height: 40vh;
+
+    &>a {
+        font-family: var(--font-heading);
+        padding: 0.5em 1em;
+        border: 1px solid white;
+        color: white;
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        text-transform: none;
+        letter-spacing: 10%;
+        font-size: 1.2em;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-3px);
+            background-color: rgb(202 195 195 / 28%);
+            color: rgb(255 255 255);
+            /* text-shadow: 0px 0px 3px grey; */
+            box-shadow: 1px 2px 6px 2px grey;
+        }
+    }
 }
 
 .heroImg {
@@ -12,25 +34,32 @@
 
 .overlay {
     position: absolute;
-    background-image: linear-gradient(to left, #cde9cd1c 10%, #00000000 50%, #876d6d8c);
+    background-image: linear-gradient(to left, #876d6d8c, #00000000 20% 50%, #876d6d8c);
     inset: 0;
 }
 
 .heroText {
     position: absolute;
     top: 2rem;
-    left: 2rem;
+    left: 3rem;
     color: white;
-    width: 40%;
+    max-width: 40%;
 }
 
 .textOnImg {
-    font-size: x-large;
-
+    font-size: 2.4em;
+    font-family: var(--font-heading);
+    letter-spacing: 3%;
 }
 
 .textOnImg2 {
-    margin-top: 1em;
+    font-size: 1.1em;
+    margin-top: 1rem;
+    font-family: var(--font-body);
+    letter-spacing: 5%;
+    line-height: 1.5;
+    text-shadow: 0px 0px 8px #534e4e;
+
 }
 
 .cardWrapper {
@@ -40,8 +69,8 @@
 }
 
 .sectionLabel {
-
-    letter-spacing: 20%;
+    font-family: var(--font-heading);
+    letter-spacing: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,11 +82,13 @@
     display: block;
     content: "";
     height: 1px;
-    width: 2rem;
-    background-color: green;
+    width: 2em;
+    background-color: #a99998;
 }
 
 .sectionTitle {
+    font-family: var(--font-body);
+    letter-spacing: 5%;
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 2rem;
