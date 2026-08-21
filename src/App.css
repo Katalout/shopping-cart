@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'sansation';
+  src: url('./assets/fonts/Sansation/Sansation-Regular.ttf') format('ttf'),
+    url('./assets/fonts/Sansation/webfontkit-20260821-055947/sansation-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'quattrocentro';
+  src: url('./assets/fonts/Quattrocento/Quattrocento-Regular.ttf') format('ttf'),
+    url('./assets/fonts/Quattrocento/quattrocento-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-heading: "quattrocentro", serif;
+  --font-body: "sansation", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 *,
 :before,
 :after {
@@ -24,29 +45,6 @@ a {
   color: black;
 }
 
-header {
-  background-image: radial-gradient(circle, rgba(200 232 221) 0%, rgba(219 219 219) 100%);
-  padding: 1em;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-
-  & h1 {
-    grid-column: 2;
-  }
-
-  & img {
-    margin-right: 2em;
-    justify-self: end;
-    align-self: center;
-    grid-column: 3;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
-
 nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -56,9 +54,15 @@ nav {
   background-image: radial-gradient(circle, rgba(200 232 221) 0%, rgba(219 219 219) 100%);
   padding: 0.5rem 1rem;
   z-index: 1;
+  font-family: var(--font-heading);
 
   & a {
     text-transform: uppercase;
+  }
+
+  &>a {
+    display: flex;
+    flex-direction: column;
   }
 
   & img {
