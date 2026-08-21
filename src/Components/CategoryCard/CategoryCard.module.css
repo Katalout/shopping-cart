@@ -2,11 +2,41 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 200ms ease;
+
+    width: 200px;
+    height: 300px;
+    /* nem uszod meg a javascriptet valszegggg */
+    box-shadow: inset 0px -4em 40px -32px #00000083;
+    background-size: cover;
+    padding: 250px 10px 10px 1em;
+    text-align: end;
+    color: white;
+
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1em;
+    letter-spacing: 5%;
+
+    transition: transform .35s, box-shadow .4s, text-shadow .4s;
+
+    &::after {
+        content: " ➢";
+        position: relative;
+        opacity: 0;
+        -webkit-transition: all 250ms;
+        transition: all 250ms;
+        font-weight: 100;
+    }
 
     &:hover {
-        box-shadow: gray 2px 5px 12px 0px;
+        box-shadow: inset 0px -54px 30px 0px #00000000,
+            0 8px 23px #00000040;
         transform: translateY(-6px);
+        text-shadow: 0px 0px 8px #272626;
+
+        &::after {
+            opacity: 1;
+        }
     }
 }
 
@@ -16,12 +46,16 @@
     border-radius: 10px;
     object-fit: cover;
     opacity: 0.8;
+    transition: opacity 200ms ease;
 
-
+    &:hover {
+        opacity: 1;
+    }
 
 }
 
 .title {
+    font-family: var(--font-heading);
     position: absolute;
     bottom: 1em;
     right: 1em;
@@ -34,6 +68,7 @@
     background-image: linear-gradient(to bottom, #463e3e1c 10%, #00000000 50%, #363f2fdb);
     inset: 0;
     transition: opacity 200ms ease;
+
 
     &:hover {
         opacity: 0.2;

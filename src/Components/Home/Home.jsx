@@ -4,6 +4,7 @@ import jewellery from "../../assets/jewellery.jpg";
 import electronics from "../../assets/electronics.jpg";
 import styles from "./Home.module.css";
 import CategoryCard from "../CategoryCard/CategoryCard.jsx";
+import { Link } from "react-router";
 
 
 export default function Home() {
@@ -16,9 +17,10 @@ export default function Home() {
                 <img className={styles.heroImg} src={heroimg} alt="two people outside riding in a shopping cart, laughing" srcset="" />
                 <div className={styles.overlay}></div>
                 <div className={styles.heroText}>
-                    <p className={styles.textOnImg}>Fresh Adventures</p>
-                    <p className={styles.textOnImg2}>Exciting new collection from our designers, limited availability</p>
+                    <p className={styles.textOnImg}>Adventures await</p>
+                    <p className={styles.textOnImg2}>Exciting new collection from our designers,<br />limited availability.</p>
                 </div>
+                <Link to="shopping">explore</Link>
             </div>
             <section className="categories">
                 <p className={styles.sectionLabel}>What we offer</p>
