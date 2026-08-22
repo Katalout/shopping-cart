@@ -1,6 +1,6 @@
 .hero {
     position: relative;
-    height: 40vh;
+    height: 50vh;
 
     &>a {
         font-family: var(--font-heading);
@@ -30,11 +30,12 @@
     height: 100%;
     object-fit: cover;
     opacity: 0.8;
+    object-position: 0 40%;
 }
 
 .overlay {
     position: absolute;
-    background-image: linear-gradient(to left, #876d6d8c, #00000000 20% 50%, #876d6d8c);
+    background-image: linear-gradient(to left, #876d6d3d, #00000000 20% 50%, #876d6d80);
     inset: 0;
 }
 

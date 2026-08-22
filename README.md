@@ -7,8 +7,6 @@ electronics Photo by <a href="https://unsplash.com/@_rxshxxd?utm_source=unsplash
 jewellery Photo by <a href="https://unsplash.com/@olaszkolda?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ola szkolda</a> on <a href="https://unsplash.com/photos/two-blonde-women-in-denim-jackets-sharing-a-moment-GHYyVXNP31o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 megoldando: 
--a hero img ne vagja le a csavo fejit szelesvasznon
 -page not found page
--title to show in browser
 -nyilacska nem biztos h minden platformon megjlenik (png it?)
 -category images alt (also overall accessibility)
