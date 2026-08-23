@@ -62,5 +62,23 @@ export default function Home() {
                 </div>
 
             </section>
+            <section className="support">
+                <ul><h3>About Brand</h3>
+                    <li>Our Mission</li>
+                    <li>Sustainability</li>
+                </ul>
+                <ul><h3>Support</h3>
+                    <li>FAQ</li>
+                    <li>Shipping</li>
+                    <li>Returns</li>
+                    <li>Warranty</li>
+                </ul>
+                <ul><h3>Contact</h3>
+                    <li>support@brand.com</li>
+                    <li>+1 23 45 678</li>
+                    <li>10 Street square, City</li>
+                    <li>Monday - Friday, 9:00 - 17:00</li>
+                </ul>
+            </section>
         </>)
 }
