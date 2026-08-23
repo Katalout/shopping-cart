@@ -7,6 +7,6 @@ electronics Photo by <a href="https://unsplash.com/@_rxshxxd?utm_source=unsplash
 jewellery Photo by <a href="https://unsplash.com/@olaszkolda?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ola szkolda</a> on <a href="https://unsplash.com/photos/two-blonde-women-in-denim-jackets-sharing-a-moment-GHYyVXNP31o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 megoldando: 
--page not found page
 -nyilacska nem biztos h minden platformon megjlenik (png it?)
+-search is nöljön
 -category images alt (also overall accessibility)
