@@ -70,31 +70,7 @@
     padding: 1rem;
 }
 
-.sectionLabel {
-    font-family: var(--font-heading);
-    letter-spacing: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-}
 
-.sectionLabel::before,
-.sectionLabel::after {
-    display: block;
-    content: "";
-    height: 1px;
-    width: 2em;
-    background-color: #a99998;
-}
-
-.sectionTitle {
-    font-family: var(--font-body);
-    letter-spacing: 5%;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
 
 .card {
     background-color: #e7dbdb63;

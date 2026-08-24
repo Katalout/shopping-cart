@@ -25,7 +25,7 @@ export default function Navbar({ cart }) {
                     <Link to="shopping">Shopping</Link>
                 </li>
                 <li>
-                    <Link to="cart">Cart
+                    <Link className={styles.count} to="cart">Cart
                         {cartCount > 0 && <AnimateThis content={cartCount} />}
                     </Link>
                 </li>

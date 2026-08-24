@@ -11,9 +11,22 @@ export default function Shopping() {
 
     return (
         <>
-            <h2>Shopping page</h2>
-            <div className={styles.cardContainer}>{products.map(item => <Card key={item.id} data={item} inCart={false} />)}
-            </div>
+            <section>
+                {/*  <p className="sectionLabel">Collection</p> */}
+                <h2 className="sectionLabel shopping" >Clothing</h2>
+                <div className={styles.cardContainer}>{products.filter(item => item.category.includes("clothing")).map(item => <Card key={item.id} data={item} inCart={false} />)}
+                </div>
+            </section>
+            <section>
+                <h2 className="sectionLabel shopping" >Jewellery</h2>
+                <div className={styles.cardContainer}>{products.filter(item => item.category === "jewelery").map(item => <Card key={item.id} data={item} inCart={false} />)}
+                </div>
+            </section>
+            <section>
+                <h2 className="sectionLabel shopping" >Electronics</h2>
+                <div className={styles.cardContainer}>{products.filter(item => item.category === "electronics").map(item => <Card key={item.id} data={item} inCart={false} />)}
+                </div>
+            </section>
         </>
     )
 }

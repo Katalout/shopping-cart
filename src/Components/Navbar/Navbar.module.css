@@ -16,3 +16,7 @@
     align-self: center;
     letter-spacing: 5%;
 }
+
+.count {
+    display: flex;
+}
