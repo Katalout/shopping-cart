@@ -4,9 +4,9 @@ import { useRef, useState } from "react";
 
 export default function Card({ data, inCart }) {
     const { cart, setCart } = useOutletContext();
-    const count = cart[data.id] ? cart[data.id].count : null;
+    const count = cart[data.id] ? cart[data.id].count : 0;
     const input = useRef(null);
-    const [inputVal, setInputVal] = useState('');
+    const [inputVal, setInputVal] = useState(0);
 
     let current = inputVal === "" ? 0 : parseInt(inputVal);
     if (inCart) current = 1;
@@ -22,15 +22,13 @@ export default function Card({ data, inCart }) {
     }
 
     const addItemToCart = (item) => () => {
-        if (current > 0) {
-            let id = item.id;
-            let newCart = { ...cart };
-            if (newCart[id]) newCart[id].count += current;
-            else newCart[id] = { ...item, count: current };
-            setCart(newCart);
-            setInputVal("");
-        }
+        let id = item.id;
+        let newCart = { ...cart };
+        if (newCart[id]) newCart[id].count += 1;
+        else newCart[id] = { ...item, count: 1 };
+        setCart(newCart);
     }
+
     const removeItemFromCart = (item) => () => {
         let id = item.id;
         let newCart = { ...cart };
@@ -39,9 +37,6 @@ export default function Card({ data, inCart }) {
         setCart(newCart);
     }
 
-    const onChange = (e) => {
-        setInputVal(e.target.value);
-    }
     if (inCart) return (
         <div className={styles.cartCard}>
             <div className="left">
@@ -59,11 +54,15 @@ export default function Card({ data, inCart }) {
             <div className={styles.card} >
                 <div className={styles.imgwrapper}><img src={data.image} alt="" /></div>
                 <h3>{data.name}</h3>
-                <p>{data.price} peták</p>
-                <label htmlFor={data.id}>Item counter: </label><button onClick={decrementVal}>-</button><input ref={input} className={styles.input} type="number" name="count" id={data.id} onChange={onChange} value={inputVal} />
-                <button onClick={incrementVal}>+</button>
-                <button onClick={addItemToCart(data)} disabled={current === 0} >Add to cart</button>
-                {count && <p>in cart: {count}</p>}
+                <div className={styles.price}>
+                    <p>{data.price} €</p>
+                    <div>
+                        <button onClick={removeItemFromCart(data)}>-</button>
+                        <span>{count}</span>
+                        <button onClick={addItemToCart(data)}>+</button>
+                    </div>
+                </div>
+
             </div>
         )
 }

@@ -1,15 +1,32 @@
 .card {
-    background-color: beige;
+    background-color: #d5e0dc82;
     border-radius: 10px;
-    width: 200px;
+    padding: 1rem;
 
+    & h3 {
+        font-family: var(--font-body);
+        letter-spacing: 5%;
+        font-size: medium;
+        margin: 1em auto;
+        text-align: center;
+    }
+
+    & .price {
+        display: flex;
+        justify-content: space-around;
+        font-family: var(--font-body);
+
+        & span {
+            margin: 1ch;
+        }
+    }
 }
 
 .imgwrapper {
     margin: 10px auto;
-    width: 180px;
-    height: 250px;
-    background-color: whitesmoke;
+    min-width: 180px;
+    aspect-ratio: 1;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,11 +34,12 @@
 
 
 .imgwrapper img {
-    width: 160px;
-    max-height: 240px;
+    max-height: 100%;
+    max-width: 100%;
     object-fit: contain;
     /* hmm but looks like it isnt positioned against the wrapper */
     object-position: center;
+    filter: drop-shadow(8px 9px 9px rgba(128, 128, 128, 0.657));
 }
 
 .cartCard {
@@ -36,20 +54,4 @@
 .right {
     display: flex;
     align-items: center;
-}
-
-.input {
-    width: 3ch;
-}
-
-/* Chrome, Safari, Edge, Opera */
-.input::-webkit-outer-spin-button,
-.input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Firefox */
-.input[type=number] {
-    -moz-appearance: textfield;
 }

@@ -15,15 +15,16 @@ export const useProducts = () => {
             })
             .then((data) => {
                 console.log(data);
-                let emez = [];
-                for (let index = 0; index < 20; index++) {
+                let arr = [];
+                for (let index = 1; index < 20; index++) {
                     const item = data[index];
                     //name, price, id
                     let { id, title: name, price, image, category } = item;
-                    emez.push({ id, name, price, image, category });
+                    name = name.split(" ").toSpliced(3).join(" ");
+                    arr.push({ id, name, price, image, category });
                 }
                 //create object of 10 products
-                setProducts(emez)
+                setProducts(arr)
             })
             .catch((error) => {
                 console.log(error);

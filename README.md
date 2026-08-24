@@ -8,5 +8,7 @@ jewellery Photo by <a href="https://unsplash.com/@olaszkolda?utm_source=unsplash
 
 megoldando: 
 -nyilacska nem biztos h minden platformon megjlenik (png it?)
--search is nöljön
+-search is nöljön meg mindenek
 -category images alt (also overall accessibility)
+-loading ne csk egy sor szöveg legyen
+-shopping card-ok: akkor is ugyanugy nezzen ki ha ket sorba bomlik az item nevee

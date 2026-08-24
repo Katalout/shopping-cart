@@ -1,7 +1,9 @@
 .cardContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 200px);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, 250px);
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1em;
 }
 
 .cardContainer>* {}
