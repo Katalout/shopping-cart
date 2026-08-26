@@ -56,10 +56,10 @@ export default function Card({ data, inCart }) {
                 <h3>{data.name}</h3>
                 <div className={styles.price}>
                     <p>{data.price} €</p>
-                    <div>
-                        <button onClick={removeItemFromCart(data)}>-</button>
+                    <div className={styles.countButtons}>
+                        <button onClick={removeItemFromCart(data)}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14"></path></svg></button>
                         <span>{count}</span>
-                        <button onClick={addItemToCart(data)}>+</button>
+                        <button onClick={addItemToCart(data)}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
                     </div>
                 </div>
 

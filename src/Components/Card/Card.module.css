@@ -2,24 +2,48 @@
     background-color: #d5e0dc82;
     border-radius: 10px;
     padding: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    align-items: center;
 
     & h3 {
         font-family: var(--font-body);
         letter-spacing: 5%;
         font-size: medium;
-        margin: 1em auto;
-        text-align: center;
+
     }
+}
 
-    & .price {
-        display: flex;
-        justify-content: space-around;
-        font-family: var(--font-body);
+.price {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-body);
+    border-radius: 20px;
 
-        & span {
-            margin: 1ch;
+    & button {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+
+        & svg {
+            vertical-align: middle;
+            transform: translateY(-1px) scale(1.1);
+            stroke: white;
         }
     }
+}
+
+.countButtons {
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(206 122 114 / 48%);
+    border-radius: 50px;
+    width: 6rem;
+    height: 2rem;
+    gap: 0.9rem;
+    color: white;
 }
 
 .imgwrapper {
@@ -31,6 +55,7 @@
     justify-content: center;
     align-items: center;
 }
+
 
 
 .imgwrapper img {
