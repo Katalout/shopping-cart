@@ -11,4 +11,6 @@ megoldando:
 -search is nöljön meg mindenek
 -category images alt (also overall accessibility)
 -loading ne csk egy sor szöveg legyen
--shopping card-ok: akkor is ugyanugy nezzen ki ha ket sorba bomlik az item nevee
+-shopping card-ok: button padding növelni h accessible hover legyen
+-footer: decorative border gaps on widescreen
+-cart class object aminek vannak methodjai? anyway lehessen elerni methodokat a cartban
