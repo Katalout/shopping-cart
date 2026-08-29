@@ -14,5 +14,45 @@
 }
 
 .summary {
-    background-color: aquamarine;
+    padding: 1.5rem;
+    background-color: #7fffd49e;
+    height: max-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+
+    & .total {
+        font-size: large;
+        font-weight: bold;
+    }
+
+    & p {
+        letter-spacing: 5%;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    & .checkout {
+
+        font-family: var(--font-heading);
+
+        font-size: medium;
+        font-weight: bold;
+        padding: 1rem 0.5rem;
+        background-color: #f7aeb9;
+
+        border: none;
+        box-shadow: 4px 4px 7px -1px #aaa0a047;
+        border-radius: 5px;
+        width: auto;
+        color: #ffffff;
+        text-shadow: 0px 0px -5px #000000;
+        letter-spacing: 18%;
+        text-transform: uppercase;
+
+    }
+
 }
