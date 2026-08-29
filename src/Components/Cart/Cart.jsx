@@ -5,6 +5,23 @@ import styles from "./Cart.module.css";
 export default function Cart() {
     const { cart, setCart } = useOutletContext();
     const cartArray = Object.values(cart);
+
+    const total = cartArray.reduce(
+        (previous, current) => {
+            let sum = previous + (current.count * current.price);
+            return sum;
+        },
+        0,
+    );
+
+    function countItems() {
+        let count = 0;
+        cartArray.forEach(item => count += item.count);
+        return count;
+    }
+
+    let cartCount = countItems();
+
     return (
         <div className="cart">
             {(cartArray.length > 0) ?
@@ -15,9 +32,9 @@ export default function Cart() {
                         </div>
                         <div className={styles.summary}>
                             <h2>Order summary</h2>
-                            <p>Items: </p>
-                            <p>Total: </p>
-                            <button>Checkout</button>
+                            <p>Items:<span>{cartCount}</span></p>
+                            <p className={styles.total}>Total:<span>{total} €</span></p>
+                            <button className={styles.checkout}>Checkout</button>
                         </div>
                     </div>
 

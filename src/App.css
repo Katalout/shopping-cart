@@ -16,6 +16,14 @@
 }
 
 @font-face {
+  font-family: 'sansation';
+  src: url('./assets/fonts/Sansation/Sansation-Bold.ttf') format('ttf'),
+    url('./assets/fonts/Sansation/webfontkit-20260821-055947/sansation-bold-webfont.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'quattrocentro';
   src: url('./assets/fonts/Quattrocento/Quattrocento-Regular.ttf') format('ttf'),
     url('./assets/fonts/Quattrocento/quattrocento-regular-webfont.woff2') format('woff2');
