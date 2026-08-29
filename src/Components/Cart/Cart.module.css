@@ -1,4 +1,18 @@
 .cartContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+
+.cartItems {
+    grid-template-columns: 1;
+    display: contents;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+}
+
+.summary {
+    background-color: aquamarine;
 }

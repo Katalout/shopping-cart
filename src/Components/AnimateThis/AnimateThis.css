@@ -1,9 +1,16 @@
 .cartCount {
     background-color: rgb(206 122 114 / 48%);
     border-radius: 5px;
-    padding: 0 0.25em;
+    padding: 0 0.3em;
+    width: 2.5ch;
     transform: translateY(-6px);
     font-size: small;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    letter-spacing: 5%;
+    right: 0;
+    transform: translate(120%, -30%);
 }
 
 .active {
