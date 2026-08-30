@@ -14,8 +14,10 @@
 }
 
 .summary {
+    position: sticky;
+    top: 4rem;
     padding: 1.5rem;
-    background-color: #7fffd49e;
+    background-color: #76edc59e;
     height: max-content;
     border-radius: 10px;
     display: flex;
@@ -42,14 +44,13 @@
         font-size: medium;
         font-weight: bold;
         padding: 1rem 0.5rem;
-        background-color: #f7aeb9;
+        background-color: #e5a1ab;
 
         border: none;
         box-shadow: 4px 4px 7px -1px #aaa0a047;
         border-radius: 5px;
         width: auto;
         color: #ffffff;
-        text-shadow: 0px 0px -5px #000000;
         letter-spacing: 18%;
         text-transform: uppercase;
 

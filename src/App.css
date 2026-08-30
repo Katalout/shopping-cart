@@ -67,6 +67,7 @@ p {
 }
 
 a {
+
   text-decoration: none;
   color: black;
 }
@@ -78,11 +79,12 @@ nav {
   position: sticky;
   top: 0;
   background-image: radial-gradient(circle, rgba(200 232 221) 0%, rgba(219 219 219) 100%);
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   z-index: 1;
   font-family: var(--font-heading);
 
-  & a {
+  & ul a {
+    font-size: large;
     text-transform: uppercase;
   }
 
@@ -102,6 +104,12 @@ nav {
       cursor: pointer;
     }
   }
+}
+
+nav li a:hover,
+nav img:hover {
+  display: block;
+  transform: scale(1.1);
 }
 
 section {
@@ -148,16 +156,47 @@ main section:nth-child(2n-1) {
 }
 
 section.categories {
-  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 section.whyus {
   background-color: #f9fdfc;
 }
 
+
+
+.cart {
+  background-color: #f9fdfc;
+  padding: 0 5rem;
+  letter-spacing: 5%;
+
+  & .carttitle {
+    margin-bottom: 2rem;
+  }
+
+  & h2 {
+    font-family: var(--font-heading);
+  }
+
+  & p {
+    font-family: var(--font-body);
+  }
+}
+
+footer {
+  padding: 3rem;
+  background-color: #cfe3dc57;
+  background-image: radial-gradient(circle, rgb(200 232 221 / 54%) 0%, rgb(219 219 219 / 32%) 100%);
+
+}
+
 section.support {
-  background-color: #5f9ea052;
-  background-image: radial-gradient(circle, #c3fdff30 0%, rgba(200 232 221) 100%);
+  box-shadow: 4px 5px 11px #a7a4a491;
+  border-radius: 30px 5px;
+  padding: 2rem;
+  background-color: rgb(200 232 221 / 49%);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr;
   justify-items: center;
@@ -170,9 +209,13 @@ section.support {
 
   & ul {
     width: max-content;
-    padding: 2rem;
 
-    &:first-child {
+    &:last-child {
+      grid-column: 4;
+
+    }
+
+    /*  &:first-child {
       border-radius: 20px 0;
       border: 1px solid #80808045;
       border-bottom: none;
@@ -184,14 +227,7 @@ section.support {
       border-top: 1px solid #80808045;
     }
 
-    &:last-child {
-      border-radius: 20px 0;
-      grid-column: 4;
-      border: 1px solid #80808045;
-      border-top: none;
-      border-left: none;
-
-    }
+     */
   }
 
   & li {
@@ -211,18 +247,5 @@ section.support {
 
     }
 
-  }
-}
-
-.cart {
-  background-color: #f9fdfc;
-  padding: 0 5rem;
-
-  & h2 {
-    font-family: var(--font-heading);
-  }
-
-  & p {
-    font-family: var(--font-body);
   }
 }
