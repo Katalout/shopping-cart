@@ -33,7 +33,7 @@ export default function Home() {
             <section className="categories">
                 <p className="sectionLabel">What we offer</p>
                 <h2 className="sectionTitle">Shop by category</h2>
-                <div className={styles.cardWrapper}>
+                <div className={styles.catCardWrapper}>
                     <CategoryCard title="clothing" img={clothes} />
                     <CategoryCard title="jewellery" img={jewellery} />
                     <CategoryCard title="electronics" img={electronics} />

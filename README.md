@@ -14,4 +14,4 @@ megoldando:
 -shopping card-ok: button padding növelni h accessible hover legyen,
 -shopping card szine legyen mas ha van belöle cartolva? hmm
 -footer: decorative border gaps on widescreen
--cart class object aminek vannak methodjai? anyway lehessen elerni methodokat a cartban
+-footer needs media query, probably

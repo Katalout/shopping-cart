@@ -64,11 +64,23 @@
 
 }
 
+.catCardWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3vw;
+    align-content: center;
+    padding: 1rem;
+    justify-items: stretch;
+}
+
 .cardWrapper {
     display: flex;
+    flex-wrap: wrap;
     gap: 3vw;
     padding: 1rem;
 }
+
+
 
 
 

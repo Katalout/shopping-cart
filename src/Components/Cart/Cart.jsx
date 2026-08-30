@@ -10,8 +10,7 @@ export default function Cart() {
         (previous, current) => {
             let sum = previous + (current.count * current.price);
             return sum;
-        },
-        0,
+        }, 0,
     );
 
     function countItems() {
@@ -22,20 +21,30 @@ export default function Cart() {
 
     let cartCount = countItems();
 
+    const clearCart = () => {
+        if (window.confirm("Are you sure you want to remove everything from your cart?")) {
+            let newCart = {};
+            setCart(newCart);
+        }
+    }
+
     return (
         <div className="cart">
             {(cartArray.length > 0) ?
                 <section>
-                    <h2>Items in your cart</h2>
+                    <h2 className="carttitle">Items in your cart</h2>
                     <div className={styles.cartContainer}>
                         <div className={styles.cartItems}>{cartArray.map(item => <Card key={item.id} data={item} inCart={true} />)}
                         </div>
-                        <div className={styles.summary}>
-                            <h2>Order summary</h2>
-                            <p>Items:<span>{cartCount}</span></p>
-                            <p className={styles.total}>Total:<span>{total} €</span></p>
-                            <button className={styles.checkout}>Checkout</button>
-                        </div>
+                        <aside>
+                            <div className={styles.summary}>
+                                <h2>Order summary</h2>
+                                <p>Items:<span>{cartCount}</span></p>
+                                <p className={styles.total}>Total:<span>{total} €</span></p>
+                                <button className={styles.checkout}>Checkout</button>
+                            </div>
+                            <button onClick={clearCart}>Clear cart</button>
+                        </aside>
                     </div>
 
                 </section>
