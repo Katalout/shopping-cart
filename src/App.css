@@ -42,7 +42,10 @@
 :root {
   --font-heading: "quattrocentro", serif;
   --font-body: "sansation", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --padding: 3rem;
 }
+
+
 
 *,
 :before,
@@ -113,7 +116,7 @@ nav img:hover {
 }
 
 section {
-  padding: 3rem;
+  padding: var(--padding);
 }
 
 main section:nth-child(2n) {
@@ -134,7 +137,7 @@ main section:nth-child(2n-1) {
   gap: 1em;
 
   &.shopping {
-    margin-bottom: 3rem;
+    margin-bottom: var(--padding);
   }
 }
 
@@ -152,7 +155,7 @@ main section:nth-child(2n-1) {
   letter-spacing: 5%;
   text-align: center;
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: var(--padding);
 }
 
 section.categories {
@@ -186,7 +189,7 @@ section.whyus {
 }
 
 footer {
-  padding: 3rem;
+  padding: var(--padding);
   background-color: #cfe3dc57;
   background-image: radial-gradient(circle, rgb(200 232 221 / 54%) 0%, rgb(219 219 219 / 32%) 100%);
 
@@ -207,8 +210,8 @@ section.support {
     font-size: large;
   }
 
-  & ul {
-    width: max-content;
+  & div {
+    flex: 1;
 
     &:last-child {
       grid-column: 4;
@@ -233,12 +236,12 @@ section.support {
   & li {
     margin-block-start: 1em;
     font-family: var(--font-body);
+    width: max-content;
 
     & svg {
       vertical-align: bottom;
       margin-right: 1ch;
       fill: black;
-      filter: drop-shadow(0px 0px 6px peachpuff);
     }
 
     &:hover {
@@ -247,5 +250,18 @@ section.support {
 
     }
 
+  }
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --padding: 2rem;
+  }
+
+  section.support {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 2rem;
   }
 }
