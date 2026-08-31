@@ -125,7 +125,7 @@ nav img:hover {
 }
 
 section {
-  padding: var(--padding);
+  padding: 3rem var(--padding);
 }
 
 main section:nth-child(2n) {
@@ -146,7 +146,7 @@ main section:nth-child(2n-1) {
   gap: 1em;
 
   &.shopping {
-    margin-bottom: var(--padding);
+    margin-bottom: 3rem;
   }
 }
 
@@ -164,7 +164,7 @@ main section:nth-child(2n-1) {
   letter-spacing: 5%;
   text-align: center;
   margin-top: 1rem;
-  margin-bottom: var(--padding);
+  margin-bottom: 3rem;
 }
 
 section.categories {
@@ -198,17 +198,17 @@ section.whyus {
 }
 
 footer {
-  padding: var(--padding);
+  /*  padding: 3rem var(--padding);
   background-color: #cfe3dc57;
-  background-image: radial-gradient(circle, rgb(200 232 221 / 54%) 0%, rgb(219 219 219 / 32%) 100%);
+  background-image: radial-gradient(circle, rgb(200 232 221 / 54%) 0%, rgb(219 219 219 / 32%) 100%); */
 
 }
 
 section.support {
-  box-shadow: 4px 5px 11px #a7a4a491;
-  border-radius: 30px 5px;
-  padding: var(--padding);
-  background-color: rgb(200 232 221 / 49%);
+  box-shadow: inset 4px 5px 11px #ffffff99;
+  padding: 3rem;
+  background-color: rgb(200 232 221 / 20%);
+  background-image: radial-gradient(circle, rgb(200 232 221 / 54%) 0%, rgb(219 219 219 / 32%) 100%);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr;
   justify-items: center;
@@ -293,11 +293,16 @@ section.support {
       gap: 3vw;
     }
   }
+
+  section.support {
+    padding-right: var(--padding);
+  }
+
 }
 
 @media (max-width: 500px) {
   :root {
-    --padding: 2ch;
+    --padding: 1rem;
   }
 
   nav {
@@ -315,9 +320,8 @@ section.support {
   }
 
   section.support {
-    & div {
-      /* min-width: 200px; */
-    }
+    padding: 2rem;
+    padding-right: var(--padding);
 
     & li {
       width: fit-content;
