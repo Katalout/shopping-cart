@@ -17,7 +17,7 @@ export default function Navbar({ cart }) {
         <nav>
             <Link to="/"><h1 className={styles.brand}>Brand</h1><span className={styles.brandtext}>for joy</span>
             </Link>
-            <ul className={styles.nav}>
+            <ul>
                 <li>
                     <Link to="/">Home</Link>
                 </li>
