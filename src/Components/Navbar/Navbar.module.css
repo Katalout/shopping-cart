@@ -1,11 +1,3 @@
-.nav {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    gap: 3em;
-    font-family: var(--font-body);
-}
-
 .brand {
     margin-bottom: -0.2em;
 }
