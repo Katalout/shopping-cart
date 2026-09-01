@@ -82,9 +82,10 @@ nav {
   position: sticky;
   top: 0;
   background-image: radial-gradient(circle, rgba(200 232 221) 0%, rgba(219 219 219) 100%);
-  padding: 1rem;
+  padding: 0.7em;
   z-index: 1;
   font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 3vw, 2rem);
 
   & ul {
     display: flex;
@@ -92,11 +93,11 @@ nav {
     justify-content: space-between;
     gap: var(--padding);
     font-family: var(--font-body);
-
+    font-size: inherit;
   }
 
   & ul a {
-    font-size: large;
+
     text-transform: uppercase;
   }
 
@@ -105,12 +106,15 @@ nav {
     flex-direction: column;
     width: min-content;
     text-transform: none;
+    font-size: clamp(2.1rem, 5vw, 2.8rem);
   }
 
-  & img {
+  & svg {
     justify-self: end;
     align-self: center;
     grid-column: 3;
+    height: 1em;
+    width: auto;
 
     &:hover {
       cursor: pointer;
@@ -250,11 +254,13 @@ section.support {
     margin-block-start: 1em;
     font-family: var(--font-body);
     width: max-content;
+    display: flex;
 
     & svg {
       vertical-align: bottom;
       margin-right: 1ch;
       fill: black;
+      flex-shrink: 0;
     }
 
     &:hover {

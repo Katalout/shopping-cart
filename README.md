@@ -13,5 +13,4 @@ megoldando:
 -loading ne csk egy sor szöveg legyen
 -shopping card-ok: button padding növelni h accessible hover legyen,
 -shopping card szine legyen mas ha van belöle cartolva? hmm
--footer needs small mobile tweak w maxcontent
--small mobile: header nav-bol kirugni a brandet
+why us section, maybe more padding on the sides and bottom of cards? more linegap?
