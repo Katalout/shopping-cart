@@ -26,9 +26,9 @@ export default function Home() {
                 <div className={styles.overlay}></div>
                 <div className={styles.heroText}>
                     <p className={styles.textOnImg}>Adventures await</p>
-                    <p className={styles.textOnImg2}>Exciting new collection from our designers,<br />limited availability.</p>
+                    <p className={styles.textOnImg2}>Exciting new collection by our designers,<br />limited availability.</p>
                 </div>
-                <Link to="shopping">explore</Link>
+                <Link className={styles.explore} to="shopping">explore</Link>
             </div>
             <section className="categories">
                 <p className="sectionLabel">What we offer</p>
