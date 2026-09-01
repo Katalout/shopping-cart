@@ -1,10 +1,11 @@
 .brand {
     margin-bottom: -0.2em;
+    font-size: inherit;
 }
 
 .brandtext {
     text-transform: none;
-    font-size: x-small;
+    font-size: 0.4em;
     align-self: center;
     letter-spacing: 5%;
 }

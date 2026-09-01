@@ -79,21 +79,21 @@
     flex-wrap: wrap;
     gap: 3vw;
 
+
 }
-
-
-
 
 
 .card {
     background-color: #e7dbdb63;
     border-radius: 5px;
     flex: 1;
-    padding: 1em;
+    padding: 2rem 2rem 3rem 2rem;
+    min-width: 12rem;
 
     letter-spacing: 5%;
-    line-height: 1.2;
+    line-height: 1.4;
     text-align: center;
+    text-wrap: pretty;
 
     display: flex;
     flex-direction: column;
@@ -149,5 +149,15 @@
 
     .explore {
         display: none;
+    }
+
+}
+
+@media (orientation: portrait) {
+    .cardWrapper {
+        gap: 3vh;
+        /* ha szelesebb mint ketö akkor maxwidth 70%?
+nagyobb betük duh */
+
     }
 }
