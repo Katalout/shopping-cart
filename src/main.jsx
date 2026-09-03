@@ -16,7 +16,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "shopping", element: <Shopping /> },
       { path: "cart", element: <Cart /> },],
-    errorElement: <ErrorPage />,
+    errorElement: <ErrorPage error="404" />,
   },
 ]);
 
