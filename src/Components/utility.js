@@ -23,7 +23,6 @@ export const useProducts = () => {
                     name = name.split(" ").toSpliced(3).join(" ");
                     arr.push({ id, name, price, image, category });
                 }
-                //create object of 10 products
                 setProducts(arr)
             })
             .catch((error) => {

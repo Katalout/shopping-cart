@@ -1,17 +1,16 @@
 @font-face {
-  font-family: 'prata';
-  src: url('./assets/fonts/Prata/Prata-Regular.ttf') format('ttf'),
-    url('./assets/fonts/Prata/Prata-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-@font-face {
   font-family: 'sansation';
   src: url('./assets/fonts/Sansation/Sansation-Regular.ttf') format('ttf'),
     url('./assets/fonts/Sansation/webfontkit-20260821-055947/sansation-regular-webfont.woff2') format('woff2');
-  font-weight: normal;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sansation';
+  src: url('./assets/fonts/Sansation/Sansation-Light.ttf') format('ttf'),
+    url('./assets/fonts/Sansation/webfontkit-20260821-055947/sansation-light-webfont.woff2') format('woff2');
+  font-weight: 200;
   font-style: normal;
 }
 
@@ -19,7 +18,7 @@
   font-family: 'sansation';
   src: url('./assets/fonts/Sansation/Sansation-Bold.ttf') format('ttf'),
     url('./assets/fonts/Sansation/webfontkit-20260821-055947/sansation-bold-webfont.woff2') format('woff2');
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -42,7 +41,7 @@
 :root {
   --font-heading: "quattrocentro", serif;
   --font-body: "sansation", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --padding: 3rem;
+  --padding: 5vw;
 }
 
 
@@ -73,6 +72,10 @@ a {
 
   text-decoration: none;
   color: black;
+}
+
+main {
+  min-height: 50vh;
 }
 
 nav {
@@ -107,6 +110,12 @@ nav {
     width: min-content;
     text-transform: none;
     font-size: clamp(2.1rem, 5vw, 2.8rem);
+    transition: text-shadow 0.3s;
+
+    &:hover {
+      text-shadow: 2px 2px 10px white;
+    }
+
   }
 
   & svg {
@@ -117,15 +126,16 @@ nav {
     width: auto;
 
     &:hover {
-      cursor: pointer;
+      filter: drop-shadow(2px 2px 2px grey);
     }
   }
 }
 
 nav li a:hover,
-nav img:hover {
+nav svg:hover {
   display: block;
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 section {
@@ -143,6 +153,7 @@ main section:nth-child(2n-1) {
 
 .sectionLabel {
   font-family: var(--font-heading);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   letter-spacing: 15%;
   display: flex;
   justify-content: center;
@@ -151,6 +162,7 @@ main section:nth-child(2n-1) {
 
   &.shopping {
     margin-bottom: 3rem;
+    font-size: clamp(1.5rem, 3vw, 3rem);
   }
 }
 
@@ -169,6 +181,7 @@ main section:nth-child(2n-1) {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 3rem;
+  font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
 section.categories {
@@ -219,16 +232,21 @@ section.support {
 
   & h3 {
     font-family: var(--font-heading);
-    margin-bottom: 1em;
-    font-size: large;
+    margin-bottom: 1rem;
+    font-size: 1.4em;
     color: #931225;
     font-weight: 100;
-    letter-spacing: 5%;
+    letter-spacing: 4%;
   }
 
-  & div {
+  &>div {
     flex: 1;
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
+    letter-spacing: 3%;
 
+    &:first-child {
+      min-width: max-content;
+    }
 
     &:last-child {
       grid-column: 4;
@@ -316,7 +334,7 @@ section.support {
   nav {
     grid-template-columns: auto 1fr;
 
-    & img {
+    & svg {
       display: none;
     }
 

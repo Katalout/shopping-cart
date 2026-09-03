@@ -27,10 +27,9 @@ export default function Cart() {
             setCart(newCart);
         }
     }
-
-    return (
-        <div className="cart">
-            {(cartArray.length > 0) ?
+    if (cartArray.length > 0)
+        return (
+            <div className="cart">
                 <section>
                     <h2 className="carttitle">Items in your cart</h2>
                     <div className={styles.cartContainer}>
@@ -48,12 +47,15 @@ export default function Cart() {
                     </div>
 
                 </section>
+            </div>
+        )
+    else return (
+        <section className={styles.empty}>
+            <h2>Your cart is empty.</h2>
+            <Link to="../shopping">Go shopping</Link>
 
-                :
-
-                <h2>Your cart is empty. <br /> <Link to="../shopping">Go shopping</Link>
-                </h2>
-            }
-        </div>
+        </section>
     )
+
+
 }

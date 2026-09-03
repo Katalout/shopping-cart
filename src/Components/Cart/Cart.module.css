@@ -57,3 +57,34 @@
     }
 
 }
+
+.empty {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
+
+    & h2 {
+        font-family: var(--font-heading);
+    }
+
+    & a {
+        background-color: rgb(206 122 114 / 29%);
+        border-radius: 100px;
+        padding: 1em 1.5em;
+        font-family: var(--font-body);
+        text-transform: uppercase;
+        transition: all 0.3s;
+    }
+}
+
+@media screen and (hover: hover) {
+    .empty a:hover {
+        background-color: rgb(206 122 114 / 40%);
+        transform: translateY(-6px);
+        box-shadow: 0 4px 12px #00000029;
+    }
+}

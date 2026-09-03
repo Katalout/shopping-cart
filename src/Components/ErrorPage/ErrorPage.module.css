@@ -6,8 +6,10 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
 
-    & h1 {
+    & h1,
+    & h2 {
         font-family: var(--font-heading);
     }
 
@@ -29,14 +31,17 @@
     text-transform: uppercase;
     transition: all 0.3s;
 
-    &:hover {
-        transform: translateY(calc(-2rem - 6px));
-        box-shadow: 0 4px 12px #00000029;
-    }
 }
 
 .label {
     color: #a99998;
     font-family: var(--font-body);
     letter-spacing: 10%;
+}
+
+@media screen and (hover: hover) {
+    .wrapper a:hover {
+        transform: translateY(calc(-2rem - 6px));
+        box-shadow: 0 4px 12px #00000029;
+    }
 }

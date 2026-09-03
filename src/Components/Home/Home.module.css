@@ -12,7 +12,7 @@
         right: 2rem;
         text-transform: none;
         letter-spacing: 10%;
-        font-size: clamp(1.2em, 2.4vw, 1.5em);
+        font-size: calc(clamp(2.3rem, 3.9vw, 5rem)*0.7);
         transition: all 0.3s ease;
 
         &:hover {
@@ -47,17 +47,19 @@
     left: 3rem;
     color: white;
     max-width: 40%;
+    font-size: clamp(2.3rem, 3.9vw, 5rem);
 }
 
 .textOnImg {
-    font-size: clamp(2em, 3.8vw, 2.6em);
+
     font-family: var(--font-heading);
     letter-spacing: 3%;
     width: max-content;
 }
 
 .textOnImg2 {
-    font-size: clamp(1.1em, 2.4vw, 1.3em);
+    font-size: 0.7em;
+    font-weight: 200;
     margin-top: 1rem;
     font-family: var(--font-body);
     letter-spacing: 5%;
@@ -137,6 +139,7 @@
         justify-content: space-between;
         max-width: 100%;
 
+
         & .textOnImg {
             width: fit-content;
         }
@@ -144,11 +147,19 @@
         & .textOnImg2 {
             align-self: end;
             text-align: end;
+
         }
     }
 
     .explore {
         display: none;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .textOnImg2 {
+        font-size: min(7vw, 0.65em);
     }
 
 }

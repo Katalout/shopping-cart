@@ -21,7 +21,7 @@
 
     font-family: var(--font-heading);
     font-weight: 600;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
     letter-spacing: 5%;
 
     transition: transform .25s, opacity .25s, box-shadow .3s, text-shadow .3s;
