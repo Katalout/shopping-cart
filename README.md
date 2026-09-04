@@ -14,3 +14,5 @@ megoldando:
 -shopping card-ok: button padding növelni h accessible hover legyen,
 -shopping card szine legyen mas ha van belöle cartolva? hmm
 why us section, maybe more padding on the sides and bottom of cards? more linegap?
+
+-question: is it ok that the navbar shifts when the cart count indicator appears?
