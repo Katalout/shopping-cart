@@ -8,19 +8,6 @@ export default function Card({ data, inCart }) {
     const input = useRef(null);
     const [inputVal, setInputVal] = useState(0);
 
-    /* let current = inputVal === "" ? 0 : parseInt(inputVal);
-    if (inCart) current = 1;
-
-    const incrementVal = () => {
-        setInputVal((current + 1).toString())
-    }
-    const decrementVal = () => {
-        if (current > 0) {
-            let newValue = (current - 1).toString();
-            setInputVal(newValue);
-        }
-    } */
-
     const increaseItem = (item) => () => {
         let id = item.id;
         let newCart = { ...cart };
@@ -69,7 +56,7 @@ export default function Card({ data, inCart }) {
                     <p>{data.price} €</p>
                     <div className={styles.countButtons}>
                         <button onClick={decreaseItem(data)}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path d="M5 12h14"></path></svg></button>
-                        <span>{count}</span>
+                        <span className={(count > 0) ? "bold" : ""} >{count}</span>
                         <button onClick={increaseItem(data)}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
                     </div>
                 </div>

@@ -68,6 +68,10 @@ p {
   list-style: none;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 a {
 
   text-decoration: none;
@@ -112,9 +116,7 @@ nav {
     font-size: clamp(2.1rem, 5vw, 2.8rem);
     transition: text-shadow 0.3s;
 
-    &:hover {
-      text-shadow: 2px 2px 10px white;
-    }
+
 
   }
 
@@ -125,18 +127,11 @@ nav {
     height: 1em;
     width: auto;
 
-    &:hover {
-      filter: drop-shadow(2px 2px 2px grey);
-    }
+
   }
 }
 
-nav li a:hover,
-nav svg:hover {
-  display: block;
-  transform: scale(1.1);
-  cursor: pointer;
-}
+
 
 section {
   padding: 3rem var(--padding);
@@ -214,6 +209,14 @@ section.whyus {
   }
 }
 
+aside {
+  position: sticky;
+  top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 footer {
   /*  padding: 3rem var(--padding);
   background-color: #cfe3dc57;
@@ -250,22 +253,7 @@ section.support {
 
     &:last-child {
       grid-column: 4;
-      /*  min-width: max-content; */
     }
-
-    /*  &:first-child {
-      border-radius: 20px 0;
-      border: 1px solid #80808045;
-      border-bottom: none;
-      border-right: none;
-
-    }
-
-    &:nth-child(2) {
-      border-top: 1px solid #80808045;
-    }
-
-     */
   }
 
   & li {
@@ -280,12 +268,25 @@ section.support {
       fill: black;
       flex-shrink: 0;
     }
+  }
+}
 
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.01);
+@media screen and (hover: hover) {
 
-    }
+  nav li a:hover,
+  nav>svg:hover {
+    display: flex;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  nav>svg:hover {
+    filter: drop-shadow(2px 2px 2px grey);
+  }
+
+  section.support li:hover {
+    cursor: pointer;
+    transform: scale(1.01);
 
   }
 }
@@ -316,6 +317,10 @@ section.support {
     & ul {
       gap: 3vw;
     }
+
+    &>svg {
+      margin-left: 2ch;
+    }
   }
 
   section.support {
@@ -326,7 +331,7 @@ section.support {
 
 
 
-@media (max-width: 500px) {
+@media (max-width: 540px) {
   :root {
     --padding: 1rem;
   }
@@ -334,7 +339,7 @@ section.support {
   nav {
     grid-template-columns: auto 1fr;
 
-    & svg {
+    &>svg {
       display: none;
     }
 

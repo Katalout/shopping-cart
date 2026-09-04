@@ -14,7 +14,7 @@
 }
 
 .summary {
-    position: sticky;
+
     top: 4rem;
     padding: 1.5rem;
     background-color: #76edc59e;
@@ -58,6 +58,31 @@
 
 }
 
+.upper {
+    display: flex;
+}
+
+.clear {
+    font-family: var(--font-heading);
+    font-size: medium;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: 1px solid grey;
+    /* box-shadow: 4px 4px 7px -1px #aaa0a047; */
+    border-radius: 5px;
+    width: auto;
+    color: grey;
+    letter-spacing: 5%;
+    text-align: left;
+    transition: all 0.3s;
+
+    & svg {
+        float: right;
+        fill: currentColor;
+        vertical-align: sub;
+    }
+}
+
 .empty {
     height: 50vh;
     display: flex;
@@ -86,5 +111,17 @@
         background-color: rgb(206 122 114 / 40%);
         transform: translateY(-6px);
         box-shadow: 0 4px 12px #00000029;
+    }
+
+    .clear:hover {
+        border-color: #9b93949e;
+        color: white;
+        font-weight: bold;
+        background-color: #9b93949e;
+        cursor: pointer;
+
+        & svg {
+            opacity: 1;
+        }
     }
 }

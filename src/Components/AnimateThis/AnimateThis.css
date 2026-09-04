@@ -2,16 +2,18 @@
     background-color: rgb(206 122 114 / 48%);
     border-radius: 5px;
     padding: 0 0.3em;
-    width: 2.5ch;
     transform: translateY(-6px);
     font-size: 0.7em;
     text-align: center;
-    /* position: absolute; */
+    position: absolute;
+    font-weight: bold;
     top: 0;
     letter-spacing: 5%;
     right: 0;
-    /* transform: translate(120%, -30%); */
+    transform: translate(120%, -30%);
 }
+
+
 
 .active {
     display: inline-block;
@@ -29,5 +31,23 @@
 
     100% {
         transform: scale(1)
+    }
+}
+
+@media (max-width: 540px) {
+    .cartCount {
+        background-color: rgb(206 122 114 / 48%);
+        border-radius: 5px;
+        padding: 0 0.2em 0 0.3em;
+        height: 100%;
+        font-size: 0.7em;
+        font-weight: normal;
+        text-align: center;
+        margin-left: 5px;
+        position: static;
+        top: 0;
+        letter-spacing: 5%;
+        right: 0;
+        transform: none;
     }
 }
