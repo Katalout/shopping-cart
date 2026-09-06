@@ -8,11 +8,15 @@ jewellery Photo by <a href="https://unsplash.com/@olaszkolda?utm_source=unsplash
 
 megoldando: 
 -nyilacska nem biztos h minden platformon megjlenik (png it?)
--search is nöljön meg mindenek
+
 -category images alt (also overall accessibility)
--loading ne csk egy sor szöveg legyen
+
 -shopping card-ok: button padding növelni h accessible hover legyen,
--shopping card szine legyen mas ha van belöle cartolva? hmm
+
 why us section, maybe more padding on the sides and bottom of cards? more linegap?
 
--question: is it ok that the navbar shifts when the cart count indicator appears?
+section padding smallscreen --> not in effect mindenhol a sorrend miatt.
+
+-categorycard-ok minwidth növelni smallscreen-en;
+
+

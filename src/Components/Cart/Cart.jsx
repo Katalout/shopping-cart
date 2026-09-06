@@ -30,7 +30,7 @@ export default function Cart() {
     if (cartArray.length > 0)
         return (
             <div className="cart">
-                <section>
+                <section className={styles.cart}>
                     <h2 className="carttitle">Items in your cart</h2>
                     <div className={styles.cartContainer}>
                         <div className={styles.cartItems}>{cartArray.map(item => <Card key={item.id} data={item} inCart={true} />)}

@@ -10,9 +10,7 @@
 
     background-color: #d5e0dca5;
 
-    transition: transform 0.4s,
-        background-color 0.2s linear,
-        box-shadow 0.1s;
+
 
     & h3 {
         font-family: var(--font-body);
@@ -52,16 +50,20 @@
 
     & button {
         padding: 0;
+        aspect-ratio: 1;
         font-size: inherit;
+        height: 1em;
+        width: auto;
         background-color: transparent;
         border: none;
+        line-height: 1;
 
 
         & svg {
-            vertical-align: middle;
-            transform: translateY(-1px) scale(1.1);
+            vertical-align: super;
+            transform: scale(1.1);
             stroke: white;
-            height: 1em;
+            height: 100%;
             width: auto;
         }
     }
@@ -76,6 +78,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.5s;
 }
 
 
@@ -100,37 +103,54 @@
     border-radius: 10px;
     padding: 1rem;
     letter-spacing: 5%;
+    min-width: 20em;
 
     & h3,
     button {
         font-family: var(--font-body);
+
+    }
+
+    & h3 {
+        font-size: 1.05em;
+        text-wrap: balance;
     }
 }
 
 .cartimgwrapper {
     composes: imgwrapper;
     min-width: 0;
-    max-width: 120px;
+    max-width: clamp(150px, 12vw, 200px);
     margin: 0;
-
+    background-color: #f8f4f4;
+    border-radius: 0px;
+    padding: 5px;
 
 }
 
 .center {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+
     & p {
         margin: 0.5em 0;
+        font-weight: lighter;
     }
 }
 
 .remove {
     align-self: flex-start;
-
     padding: 0;
     background: none;
     border: none;
+    height: 1.5em;
+    aspect-ratio: 1;
+    width: auto;
+    font-size: inherit;
 
     & svg {
-        height: 2rem;
+        height: 100%;
         width: auto;
         fill: gray;
     }
@@ -140,24 +160,32 @@
 }
 
 .cartCountButtons {
+
+    background-color: #ffffff8f;
     display: flex;
     align-items: center;
-    background-color: transparent;
     font-family: var(--font-body);
-    font-size: large;
     gap: 0.9rem;
+    width: max-content;
 
     & button {
         padding: 0;
-        background-color: transparent;
+        background-color: #eee7e5ba;
         border-radius: 5px;
         width: auto;
         aspect-ratio: 1;
-        height: 2em;
+        height: 1.1em;
+        transform: scale(1.1);
+        font-size: inherit;
+        border-color: #b1aead;
+        border-style: outset;
 
         & svg {
-            vertical-align: middle;
-            transform: translateY(-1px) scale(1.1);
+            vertical-align: baseline;
+            transform: translateY(-2px);
+            stroke-width: 2.5px;
+            height: 70%;
+            width: auto;
         }
     }
 }
@@ -169,10 +197,9 @@
     }
 
     .card:hover {
-        transform: scale(1.1);
-        background-color: #d5e0dccd;
-        box-shadow: 8px 3px 30px -7px #b3aeaedb;
-        z-index: 2;
+        .imgwrapper {
+            transform: scale(1.03);
+        }
     }
 
     .countButtons button:hover {
@@ -188,5 +215,38 @@
             fill: rgba(0, 0, 0, 0.803);
         }
 
+    }
+}
+
+@media (max-width: 500px) {
+    .cartCard {
+        min-width: fit-content;
+        display: flex;
+
+        position: relative;
+
+        flex-direction: column;
+        justify-content: normal;
+        align-items: center;
+        gap: 1rem;
+        background-color: #d2b3ac4a;
+        border-radius: 10px;
+        padding: 1rem;
+        letter-spacing: 5%;
+    }
+
+    .cartimgwrapper {
+        min-width: 0;
+        max-width: 100%;
+        margin: 0;
+        background-color: #f8f4f4;
+        border-radius: 0px;
+        padding: var(--padding);
+    }
+
+    .remove {
+        position: absolute;
+        bottom: var(--padding);
+        right: var(--padding);
     }
 }
