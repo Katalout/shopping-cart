@@ -7,17 +7,11 @@ import diamond from "../../assets/diamond.svg";
 import shield from "../../assets/shield.svg";
 import star from "../../assets/star.svg";
 import approval from "../../assets/approval.svg";
-import phone from "../../assets/phone.svg";
-import mail from "../../assets/mail.svg";
-import location from "../../assets/location.svg";
-import clock from "../../assets/clock.svg";
 import CategoryCard from "../CategoryCard/CategoryCard.jsx";
 import { Link } from "react-router";
 
 
 export default function Home() {
-
-    console.log(star);
 
     return (
         <>
