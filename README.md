@@ -13,10 +13,4 @@ megoldando:
 
 -shopping card-ok: button padding növelni h accessible hover legyen,
 
-why us section, maybe more padding on the sides and bottom of cards? more linegap?
-
-section padding smallscreen --> not in effect mindenhol a sorrend miatt.
-
--categorycard-ok minwidth növelni smallscreen-en;
-
 
