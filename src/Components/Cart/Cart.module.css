@@ -57,6 +57,8 @@
         letter-spacing: 18%;
         text-transform: uppercase;
 
+        transition: all 0.3s;
+
     }
 
 }
@@ -111,6 +113,14 @@
 }
 
 @media screen and (hover: hover) {
+    .checkout:hover {
+        color: white;
+        transform: translateY(-3px);
+        background-color: #f4a9b4;
+        /* text-shadow: 0px 0px 3px grey; */
+        box-shadow: 4px 4px 7px -1px #aaa0a05d, inset 8px 6px 8px 0px #f1eaea91;
+    }
+
     .empty a:hover {
         background-color: rgb(206 122 114 / 40%);
         transform: translateY(-6px);
@@ -151,5 +161,11 @@
             order: 1;
             position: static;
         }
+    }
+}
+
+@media (max-width: 540px) {
+    section.cart {
+        padding: 3rem 0;
     }
 }
