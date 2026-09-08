@@ -268,7 +268,7 @@ section.support {
   }
 
   & li {
-    margin-block-start: 1em;
+    margin-block-start: 0.5em;
     font-family: var(--font-body);
     width: max-content;
     display: flex;
@@ -309,9 +309,46 @@ section.support {
 
   section.support {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    gap: 2rem;
+    justify-content: space-between;
+
+  }
+}
+
+@media (max-width: 850px) {
+  section.support {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    padding: 3rem var(--padding);
+
+    & h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    &>div:first-child {
+      margin-right: 0;
+    }
+
+    & ul {
+
+      display: grid;
+      grid-template-columns: 13ch 14ch;
+      gap: 8vw;
+      row-gap: 0.5rem;
+
+      & li {
+        margin-block-start: 0;
+      }
+    }
+
+    &>div:last-child ul {
+      grid-template-columns: repeat(auto-fit, minmax(46%, 1fr));
+      column-gap: 2em;
+
+      & li {
+        width: fit-content;
+      }
+    }
   }
 }
 
@@ -334,9 +371,7 @@ section.support {
     }
   }
 
-  section.support {
-    padding-right: var(--padding);
-  }
+
 
 }
 
@@ -366,8 +401,7 @@ section.support {
   }
 
   section.support {
-    padding: 2rem;
-    padding-right: var(--padding);
+    padding: 1.5rem 1rem;
 
     & li {
       width: fit-content;
