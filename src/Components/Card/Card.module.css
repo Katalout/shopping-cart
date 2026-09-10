@@ -10,7 +10,8 @@
 
     background-color: #d5e0dca5;
 
-
+    /* max-width: 40vw; */
+    width: stretch;
 
     & h3 {
         font-family: var(--font-body);
@@ -76,14 +77,23 @@
 
 
 .imgwrapper {
-    margin: 10px auto;
+    /*     margin: 10px auto; */
     min-width: 180px;
     aspect-ratio: 1;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s;
+
+
+
+    max-height: 33vh;
+    width: stretch;
+    /* padding: 1rem 0; */
+    /* border-radius: 10px; */
+    /* background-color: #f9fdfca8; */
+    margin: 0 auto 10px;
+
 }
 
 
@@ -96,6 +106,7 @@
     /* hmm but looks like it isnt positioned against the wrapper */
     object-position: center;
     filter: drop-shadow(8px 9px 9px rgba(128, 128, 128, 0.657));
+    transition: transform 0.5s;
 }
 
 .cartCard {
@@ -208,7 +219,7 @@
     }
 
     .card:hover {
-        .imgwrapper {
+        .imgwrapper img {
             transform: scale(1.03);
         }
     }
@@ -231,32 +242,56 @@
 
 @media (max-width: 600px) {
     .card {
-        min-width: fit-content;
         max-width: 100%;
         display: flex;
         position: relative;
         flex-direction: column;
         justify-content: normal;
         align-items: stretch;
-        border-radius: 0px;
+
         padding: var(--padding);
         letter-spacing: 5%;
     }
 
     .imgwrapper {
         min-width: 0;
-        max-width: none;
+        width: stretch;
+        max-width: 100%;
         max-height: 34vh;
         margin: 0;
-        background-color: #f9fdfca8;
-        border-radius: 10px;
-        padding: 1rem 0;
+
+
+
         /* margin: 0 auto; */
-        /* aspect-ratio: unset;*/
+        aspect-ratio: 1;
     }
 }
 
 @media (max-width: 500px) {
+    .card {
+        border-radius: 0px;
+
+        & h3 {
+            margin: 0;
+            padding: 0.7rem 0 0.6rem 0;
+            background-color: #f1f7f5;
+        }
+
+        & .price {
+            background-color: #f1f7f5;
+            border-radius: 0 0 10px 10px;
+            padding-bottom: 1rem;
+        }
+    }
+
+    .imgwrapper {
+        padding: 1rem 0;
+        background-color: #f9fdfca8;
+        border-radius: 10px 10px 0 0;
+    }
+
+
+
     .cartCard {
         min-width: fit-content;
         max-width: 100%;
