@@ -2,6 +2,7 @@
     background-color: rgb(206 122 114 / 48%);
     border-radius: 5px;
     padding: 0 0.3em;
+    width: 2ch;
     transform: translateY(-6px);
     font-size: 0.7em;
     text-align: center;
@@ -39,15 +40,11 @@
         background-color: rgb(206 122 114 / 48%);
         border-radius: 5px;
         padding: 0 0.2em 0 0.3em;
-        height: 100%;
         font-size: 0.7em;
-        font-weight: normal;
         text-align: center;
-        margin-left: 5px;
-        position: static;
         top: 0;
         letter-spacing: 5%;
         right: 0;
-        transform: none;
+        transform: translate(100%, -20%);
     }
 }

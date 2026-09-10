@@ -24,7 +24,7 @@
     font-size: clamp(1.5rem, 3.5vw, 2.5rem);
     letter-spacing: 5%;
 
-    transition: transform .25s, opacity .25s, box-shadow .3s, text-shadow .3s;
+    transition: all 0.4s, box-shadow 0.5s;
 
     &::after {
         content: "➢";
@@ -37,6 +37,7 @@
 
 
 }
+
 
 .card:nth-child(3) {
     background-position-y: center;
@@ -56,5 +57,22 @@
             margin-left: 0.3ch;
             margin-right: 1ch;
         }
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+
+        max-height: 30vh;
+        background-position-y: 29%;
+        aspect-ratio: .7;
+        font-size: 2em;
+        box-shadow: inset 0px -5em 1em -2em #0000002e;
+        text-shadow: 0 0 14px black;
+    }
+
+    .card:first-child {
+        background-position-y: 43%;
+
     }
 }

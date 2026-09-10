@@ -130,7 +130,6 @@
     .clear:hover {
         border-color: #9b93949e;
         color: white;
-        font-weight: bold;
         background-color: #9b93949e;
         cursor: pointer;
 
@@ -145,9 +144,11 @@
         padding: 3rem var(--padding);
     }
 
-    .cartContainer {
+    section .cartContainer {
         display: flex;
         flex-direction: column;
+        font-size: 1.3rem;
+
 
         &>* {
             flex: 1;
@@ -160,12 +161,41 @@
         & aside {
             order: 1;
             position: static;
+            flex-direction: row;
+            align-items: end;
+        }
+
+        & .summary {
+            flex: 1;
+        }
+
+        & .clear {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5em;
         }
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 500px) {
     section.cart {
         padding: 3rem 0;
+
+        & aside {
+            flex-direction: column;
+            align-items: stretch;
+
+            & .clear {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 0;
+            }
+        }
     }
+
+
 }

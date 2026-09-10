@@ -9,7 +9,7 @@ export default function Cart() {
     const total = cartArray.reduce(
         (previous, current) => {
             let sum = previous + (current.count * current.price);
-            return sum;
+            return Math.round(sum * 100) / 100;
         }, 0,
     );
 

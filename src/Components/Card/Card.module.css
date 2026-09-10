@@ -48,6 +48,11 @@
     /* gap: 0.9rem; */
     color: white;
 
+    & span {
+        width: 2ch;
+        text-align: center;
+    }
+
     & button {
         padding: 0;
         aspect-ratio: 1;
@@ -168,6 +173,11 @@
     gap: 0.9rem;
     width: max-content;
 
+    & span {
+        width: 2ch;
+        text-align: center;
+    }
+
     & button {
         padding: 0;
         background-color: #eee7e5ba;
@@ -179,6 +189,7 @@
         font-size: inherit;
         border-color: #b1aead;
         border-style: outset;
+
 
         & svg {
             vertical-align: baseline;
@@ -218,35 +229,64 @@
     }
 }
 
+@media (max-width: 600px) {
+    .card {
+        min-width: fit-content;
+        max-width: 100%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: normal;
+        align-items: stretch;
+        border-radius: 0px;
+        padding: var(--padding);
+        letter-spacing: 5%;
+    }
+
+    .imgwrapper {
+        min-width: 0;
+        max-width: none;
+        max-height: 34vh;
+        margin: 0;
+        background-color: #f9fdfca8;
+        border-radius: 10px;
+        padding: 1rem 0;
+        /* margin: 0 auto; */
+        /* aspect-ratio: unset;*/
+    }
+}
+
 @media (max-width: 500px) {
     .cartCard {
         min-width: fit-content;
+        max-width: 100%;
         display: flex;
-
         position: relative;
-
         flex-direction: column;
         justify-content: normal;
-        align-items: center;
+        align-items: stretch;
         gap: 1rem;
         background-color: #d2b3ac4a;
         border-radius: 10px;
-        padding: 1rem;
+        padding: var(--padding);
         letter-spacing: 5%;
     }
 
     .cartimgwrapper {
         min-width: 0;
-        max-width: 100%;
+        max-width: none;
+        max-height: 34vh;
         margin: 0;
         background-color: #f8f4f4;
         border-radius: 0px;
-        padding: var(--padding);
+        padding: 1rem 0;
+        /* margin: 0 auto; */
+        /* aspect-ratio: unset;*/
     }
 
     .remove {
         position: absolute;
-        bottom: var(--padding);
-        right: var(--padding);
+        bottom: 1.5rem;
+        right: 1.5rem;
     }
 }

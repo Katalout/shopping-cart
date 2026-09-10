@@ -41,7 +41,7 @@ export default function Card({ data, inCart }) {
                     <button onClick={decreaseItem(data)} >
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path d="M5 12h14"></path></svg>
                     </button>
-                    {count}
+                    <span>{count}</span>
                     <button onClick={increaseItem(data)}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
                 </div>
             </div>
