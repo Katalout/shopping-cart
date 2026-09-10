@@ -75,7 +75,7 @@ p {
 a {
 
   text-decoration: none;
-  color: black;
+  color: currentColor;
 }
 
 main {
@@ -84,12 +84,12 @@ main {
 
 nav {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   position: sticky;
   top: 0;
   background-image: radial-gradient(circle, rgba(200 232 221) 0%, rgba(219 219 219) 100%);
-  padding: 0.7em;
+  padding: 0.2em 1.5rem;
   z-index: 1;
   font-family: var(--font-heading);
   font-size: clamp(1.2rem, 3vw, 2rem);
@@ -131,10 +131,30 @@ nav {
   }
 }
 
+.brand {
+  & h1 {
+    font-size: inherit;
+    margin-bottom: -0.2em;
+  }
+}
+
+.brandtext {
+  text-transform: none;
+  font-size: 0.4em;
+  align-self: center;
+  letter-spacing: 5%;
+}
+
+.count {
+  display: flex;
+  position: relative;
+}
+
+
 
 
 section {
-  padding: 3rem var(--padding);
+  padding: calc(1.5 * var(--padding)) var(--padding);
 }
 
 main section:nth-child(2n) {
@@ -156,8 +176,8 @@ main section:nth-child(2n-1) {
   gap: 1em;
 
   &.shopping {
-    margin-bottom: 3rem;
-    font-size: clamp(1.5rem, 3vw, 3rem);
+    margin-bottom: calc(1.5 * var(--padding));
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
   }
 }
 
@@ -175,8 +195,8 @@ main section:nth-child(2n-1) {
   letter-spacing: 5%;
   text-align: center;
   margin-top: 1rem;
-  margin-bottom: 3rem;
-  font-size: clamp(1.5rem, 3vw, 3rem);
+  margin-bottom: calc(1.5 * var(--padding));
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
 }
 
 section.categories {
@@ -358,9 +378,10 @@ section.support {
   }
 
   nav {
-    padding: 3vw;
+
     grid-template-columns: 1fr 1fr auto;
     gap: 3vw;
+    padding: 0.2em var(--padding);
 
     & ul {
       gap: 3vw;
@@ -369,6 +390,10 @@ section.support {
     &>svg {
       margin-left: 2ch;
     }
+  }
+
+  .cart .carttitle {
+    font-size: 1.8rem;
   }
 
 
@@ -383,21 +408,26 @@ section.support {
   }
 
   section {
-    padding: 3rem 0;
+    padding: 3rem 0 0;
   }
 
   nav {
-    grid-template-columns: auto 1fr;
+    display: flow;
+    letter-spacing: -7%;
+    padding: 0.2em 1.5rem;
 
     &>svg {
       display: none;
     }
 
     & ul {
-      flex-direction: column;
+      justify-content: space-between;
       gap: 0;
-      align-items: end;
     }
+  }
+
+  .brand {
+    display: none;
   }
 
   section.support {
@@ -407,5 +437,9 @@ section.support {
       width: fit-content;
 
     }
+  }
+
+  .carttitle {
+    margin-left: 1em;
   }
 }

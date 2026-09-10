@@ -1,6 +1,7 @@
 .hero {
     position: relative;
     height: 50vh;
+    font-size: clamp(2rem, 3.5vw, 4rem);
 
     & .explore {
         font-family: var(--font-heading);
@@ -12,7 +13,7 @@
         right: 2rem;
         text-transform: none;
         letter-spacing: 10%;
-        font-size: calc(clamp(2.3rem, 3.9vw, 5rem)*0.7);
+        font-size: 0.7em;
         transition: all 0.3s ease;
 
         &:hover {
@@ -29,7 +30,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.8;
     object-position: 0 40%;
 }
 
@@ -47,7 +47,7 @@
     left: 3rem;
     color: white;
     max-width: 40%;
-    font-size: clamp(2.3rem, 3.9vw, 5rem);
+
 }
 
 .textOnImg {
@@ -78,7 +78,7 @@
 
 .cardWrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: balance;
     gap: 3vw;
 
 
@@ -123,8 +123,13 @@
 
 
 @media (max-width: 600px) {
+    .hero {
+        height: 40vh;
+    }
+
     .heroImg {
         object-position: 70% 40%;
+
     }
 
     .overlay {
@@ -157,12 +162,17 @@
         display: none;
     }
 
-    .catCardWrapper {
+    .catCardWrapper,
+    .cardWrapper {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 3vw;
+        gap: 4vh;
         align-content: center;
         justify-items: stretch;
+    }
+
+    .card {
+        font-size: 1.3rem;
     }
 
 }
@@ -172,13 +182,4 @@
         font-size: min(7vw, 0.65em);
     }
 
-}
-
-@media (orientation: portrait) {
-    .cardWrapper {
-        gap: 3vh;
-        /* ha szelesebb mint ketö akkor maxwidth 70%?
-nagyobb betük duh */
-
-    }
 }

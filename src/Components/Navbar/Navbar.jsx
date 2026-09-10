@@ -1,6 +1,4 @@
 import { Link } from "react-router";
-import styles from "./Navbar.module.css"
-import { useState, useEffect } from "react";
 import AnimateThis from "../AnimateThis/AnimateThis";
 
 export default function Navbar({ cart }) {
@@ -14,7 +12,7 @@ export default function Navbar({ cart }) {
 
     return (
         <nav>
-            <Link to="/"><h1 className={styles.brand}>Brand</h1><span className={styles.brandtext}>for joy</span>
+            <Link to="/" className="brand"><h1 >Brand</h1><span className="brandtext">for joy</span>
             </Link>
             <ul>
                 <li>
@@ -24,7 +22,7 @@ export default function Navbar({ cart }) {
                     <Link to="shopping">Shopping</Link>
                 </li>
                 <li>
-                    <Link className={styles.count} to="cart">Cart
+                    <Link className="count" to="cart">Cart
                         {cartCount > 0 && <AnimateThis content={cartCount} />}
                     </Link>
                 </li>

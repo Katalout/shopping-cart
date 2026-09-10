@@ -1,12 +1,9 @@
 import styles from "./CategoryCard.module.css"
+import { Link } from "react-router";
 
 function CategoryCard({ title, img }) {
     return (
-        <div className={styles.card} style={{ backgroundImage: `url(${img})` }}>{title}
-            {/* <img className={styles.cardImg} src={img} alt="" /> */}
-            {/* <h3 className={styles.title}></h3> */}
-            {/* <div className={styles.overlay}></div> */}
-        </div>
+        <Link className={styles.card} style={{ backgroundImage: `url(${img})` }} to="shopping">{title}</Link>
     )
 }
 
