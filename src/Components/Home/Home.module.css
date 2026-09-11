@@ -106,7 +106,7 @@
 
     & img {
         filter: drop-shadow(5px 2px 5px rgba(128, 128, 128, 0.714));
-        height: 3rem;
+        height: 3em;
     }
 
     & h3 {

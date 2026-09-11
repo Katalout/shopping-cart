@@ -48,6 +48,7 @@
     height: auto;
     /* gap: 0.9rem; */
     color: white;
+    padding: 5px;
 
     & span {
         width: 2ch;
