@@ -5,14 +5,15 @@
     /* gap: 4vw; */
     margin-top: 1em;
 
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 5vw;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .cardContainer {
         gap: 3vw;
-
+        row-gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
 }
 

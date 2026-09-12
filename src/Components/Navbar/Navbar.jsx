@@ -23,7 +23,7 @@ export default function Navbar({ cart }) {
                 </li>
                 <li>
                     <Link className="count" to="cart">Cart
-                        {cartCount > 0 && <AnimateThis content={cartCount} />}
+                        {cartCount > 0 && <AnimateThis content={cartCount} outerclass="cartCount" activeclass="active" />}
                     </Link>
                 </li>
             </ul>

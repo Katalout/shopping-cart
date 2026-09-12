@@ -225,7 +225,7 @@ section.whyus {
 
   & .carttitle {
     margin-bottom: 2rem;
-    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
   }
 
   & h2 {
@@ -248,17 +248,14 @@ aside {
 }
 
 footer {
-  /*  padding: 3rem var(--padding);
-  background-color: #cfe3dc57;
-  background-image: radial-gradient(circle, rgb(200 232 221 / 54%) 0%, rgb(219 219 219 / 32%) 100%); */
+  background-color: rgb(200 232 221 / 20%);
+  background-image: radial-gradient(circle, rgb(200 232 221 / 54%) 0%, rgb(219 219 219 / 32%) 100%);
 
 }
 
 section.support {
-  box-shadow: inset 4px 5px 11px #ffffff99;
+  box-shadow: inset 0px 12px 20px -7px #ffffff99;
   padding: 3rem;
-  background-color: rgb(200 232 221 / 20%);
-  background-image: radial-gradient(circle, rgb(200 232 221 / 54%) 0%, rgb(219 219 219 / 32%) 100%);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr;
   justify-items: center;
@@ -274,7 +271,7 @@ section.support {
 
   &>div {
     flex: 1;
-    font-size: clamp(1rem, 2.2vw, 1.5rem);
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
     letter-spacing: 3%;
 
     &:first-child {
@@ -294,10 +291,43 @@ section.support {
     display: flex;
 
     & svg {
-      vertical-align: bottom;
       margin-right: 1ch;
       fill: black;
       flex-shrink: 0;
+      height: 1em;
+      width: auto;
+    }
+  }
+}
+
+.credit {
+  display: flex;
+  box-shadow: inset 0px 5px 11px 5px #ada3a326;
+  justify-content: center;
+  padding: 0.5rem;
+
+  & a {
+    background-color: transparent;
+    color: #931225;
+    border: none;
+    font-weight: 100;
+    border-radius: 5px;
+    padding: 1em 1.5em 0.8em;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    letter-spacing: 8%;
+
+    & span {
+      font-weight: normal;
+    }
+
+    & img {
+      height: 1em;
+      width: auto;
+      vertical-align: text-top;
+      margin-left: 0.4em;
+      opacity: 0.7;
+      transition: all 0.2s;
     }
   }
 }
@@ -320,6 +350,19 @@ section.support {
     transform: scale(1.01);
 
   }
+
+  .credit a:hover {
+    & span {
+      text-decoration: underline 1px;
+      text-underline-offset: 4px;
+    }
+
+    & img {
+      transform: scale(1.1);
+      opacity: 1;
+      filter: drop-shadow(2px 2px 2px rgba(186, 186, 186, 0.568));
+    }
+  }
 }
 
 @media (max-width: 1000px) {
@@ -339,7 +382,7 @@ section.support {
     flex-direction: column;
     align-items: stretch;
     gap: 1.5rem;
-    padding: 3rem var(--padding);
+    padding: 3rem var(--padding) 3rem calc(var(--padding) + 1rem);
 
     & h3 {
       margin-bottom: 0.5rem;
@@ -409,6 +452,10 @@ section.support {
 
   section {
     padding: 3rem 0 0;
+
+    &:last-child {
+      padding: 3rem 0;
+    }
   }
 
   nav {
@@ -423,6 +470,11 @@ section.support {
     & ul {
       justify-content: space-between;
       gap: 0;
+
+      & a {
+        display: flex;
+        padding: 0.5em;
+      }
     }
   }
 
@@ -430,16 +482,24 @@ section.support {
     display: none;
   }
 
-  section.support {
-    padding: 1.5rem 1rem;
-
-    & li {
-      width: fit-content;
-
-    }
+  section.support li {
+    width: fit-content;
   }
 
   .carttitle {
-    margin-left: 1em;
+    margin: 0 1em;
+  }
+
+  .credit {
+
+    & a {
+      text-align: center;
+      padding: 0.5em;
+
+      & span {
+        display: block;
+      }
+    }
+
   }
 }

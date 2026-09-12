@@ -135,9 +135,17 @@
 }
 
 .cartimgwrapper {
-    composes: imgwrapper;
+    width: stretch;
     min-width: 0;
     max-width: clamp(150px, 12vw, 200px);
+    max-height: 33vh;
+
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
     margin: 0;
     background-color: #f8f4f4;
     border-radius: 0px;
@@ -244,12 +252,10 @@
 @media (max-width: 600px) {
     .card {
         max-width: 100%;
-        display: flex;
         position: relative;
-        flex-direction: column;
-        justify-content: normal;
+        justify-content: stretch;
         align-items: stretch;
-
+        justify-items: stretch;
         padding: var(--padding);
         letter-spacing: 5%;
     }
@@ -287,7 +293,7 @@
 
     .imgwrapper {
         padding: 1rem 0;
-        background-color: #f9fdfca8;
+        background-color: #f1f7f5;
         border-radius: 10px 10px 0 0;
     }
 
