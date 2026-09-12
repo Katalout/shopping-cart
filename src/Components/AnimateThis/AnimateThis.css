@@ -47,3 +47,9 @@
         transform: translate(1em, 0.5em);
     }
 }
+
+@media (max-width: 370px) {
+    .cartCount {
+        display: none;
+    }
+}

@@ -157,6 +157,7 @@
     align-self: stretch;
     display: flex;
     flex-direction: column;
+    margin-bottom: 0.5rem;
 
     & p {
         margin: 0.5em 0;
@@ -205,9 +206,9 @@
         width: auto;
         aspect-ratio: 1;
         height: 1.1em;
-        transform: scale(1.1);
+        transform: scale(1.5);
         font-size: inherit;
-        border-color: #b1aead;
+        border-color: #b1aead88;
         border-style: outset;
 
 
@@ -292,7 +293,7 @@
     }
 
     .imgwrapper {
-        padding: 1rem 0;
+        padding: 1rem;
         background-color: #f1f7f5;
         border-radius: 10px 10px 0 0;
     }
@@ -321,14 +322,14 @@
         margin: 0;
         background-color: #f8f4f4;
         border-radius: 0px;
-        padding: 1rem 0;
+        padding: 1rem;
         /* margin: 0 auto; */
         /* aspect-ratio: unset;*/
     }
 
     .remove {
         position: absolute;
-        bottom: 1.5rem;
-        right: 1.5rem;
+        bottom: 1rem;
+        right: 0.7rem;
     }
 }

@@ -503,3 +503,26 @@ section.support {
 
   }
 }
+
+@media (max-width:370px) {
+  nav {
+    display: flow;
+    letter-spacing: -7%;
+    padding: 0;
+
+
+    & ul a {
+      display: flex;
+      padding: 0.5rem 0.3rem;
+    }
+  }
+
+  section.support {
+    padding: var(--padding);
+
+    &>div:first-child ul {
+      grid-template-columns: auto;
+    }
+  }
+
+}
