@@ -1,7 +1,7 @@
 import './AnimateThis.css';
 import { useEffect, useState } from 'react';
 
-const AnimateThis = ({ content }) => {
+const AnimateThis = ({ content, outerclass, activeclass }) => {
     const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
@@ -15,8 +15,8 @@ const AnimateThis = ({ content }) => {
     }, [content]);
 
     return (
-        <span className='cartCount'>
-            <span className={isActive ? 'active' : ''}>
+        <span className={outerclass}>
+            <span className={isActive ? activeclass : ''}>
                 {content}
             </span>
         </span>

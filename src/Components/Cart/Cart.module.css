@@ -114,6 +114,7 @@
 
 @media screen and (hover: hover) {
     .checkout:hover {
+        cursor: pointer;
         color: white;
         transform: translateY(-3px);
         background-color: #f4a9b4;

@@ -13,4 +13,6 @@ megoldando:
 
 -shopping card-ok: button padding növelni h accessible hover legyen,
 
+-xs media quera for below 365px width
+
 

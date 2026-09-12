@@ -1,3 +1,5 @@
+import githubIcon from "../../assets/github.svg";
+
 function Footer() {
     return (
         <footer>
@@ -27,7 +29,7 @@ function Footer() {
                     </ul>
                 </div>
             </section>
-
+            <div className="credit"><a href="https://github.com/Katalout" target="_blank">Developed by <span>Katalin Jászberényi<img src={githubIcon} alt="github" height="20px" /></span></a></div>
         </footer>
     )
 

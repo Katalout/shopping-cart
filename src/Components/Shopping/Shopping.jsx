@@ -18,7 +18,13 @@ export default function Shopping() {
             <section >
                 {/*  <p className="sectionLabel">Collection</p> */}
                 <h2 className="sectionLabel shopping" >Clothing</h2>
-                <div className={styles.cardContainer}>{products.filter(item => item.category.includes("clothing")).map(item => <Card key={item.id} data={item} inCart={false} />)}
+                <div
+                    className={styles.cardContainer}>
+                    {products
+                        .filter(item => item.category.includes("clothing"))
+                        .map(item =>
+                            <Card key={item.id} data={item} inCart={false} />)
+                    }
                 </div>
             </section>
             <section>
