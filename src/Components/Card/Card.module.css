@@ -16,7 +16,7 @@
     & h3 {
         font-family: var(--font-body);
         letter-spacing: 5%;
-        font-size: 1.3rem;
+        font-size: 1em;
         margin: 0.7rem 0 0.6rem 0;
         text-align: center;
 
@@ -32,7 +32,7 @@
     font-family: var(--font-body);
 
     width: 100%;
-    font-size: 1.15rem;
+    font-size: 0.9em;
 
 }
 
@@ -79,7 +79,7 @@
 
 .imgwrapper {
     /*     margin: 10px auto; */
-    min-width: 180px;
+    /* min-width: 180px; */
     aspect-ratio: 1;
 
     display: flex;
@@ -160,8 +160,9 @@
     margin-bottom: 0.5rem;
 
     & p {
-        margin: 0.5em 0;
+        margin: 0.5em 0 0.7em;
         font-weight: lighter;
+        font-size: 0.9em;
     }
 }
 
@@ -193,6 +194,7 @@
     font-family: var(--font-body);
     gap: 0.9rem;
     width: max-content;
+    margin-left: 0.2em;
 
     & span {
         width: 2ch;
@@ -224,7 +226,7 @@
 
 @media screen and (hover: hover) {
     .cartCountButtons button:hover {
-        transform: scale(1.2);
+        transform: scale(1.6);
         cursor: pointer;
     }
 

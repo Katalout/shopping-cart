@@ -89,10 +89,10 @@ nav {
   position: sticky;
   top: 0;
   background-image: radial-gradient(circle, rgba(200 232 221) 0%, rgba(219 219 219) 100%);
-  padding: 0.2em 1.5rem;
+  padding: 0.3em 1rem;
   z-index: 1;
   font-family: var(--font-heading);
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-size: clamp(1.2rem, 3vw, 4rem);
 
   & ul {
     display: flex;
@@ -132,8 +132,10 @@ nav {
 }
 
 .brand {
+  font-size: inherit;
+
   & h1 {
-    font-size: inherit;
+    font-size: 1em;
     margin-bottom: -0.2em;
   }
 }
@@ -154,6 +156,7 @@ nav {
 
 
 section {
+  font-size: clamp(1rem, 2vw, 2rem);
   padding: calc(1.5 * var(--padding)) var(--padding);
 }
 
@@ -168,7 +171,7 @@ main section:nth-child(2n-1) {
 
 .sectionLabel {
   font-family: var(--font-heading);
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: 1.4em;
   letter-spacing: 15%;
   display: flex;
   justify-content: center;
@@ -177,7 +180,7 @@ main section:nth-child(2n-1) {
 
   &.shopping {
     margin-bottom: calc(1.5 * var(--padding));
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: 2em;
   }
 }
 
@@ -196,7 +199,7 @@ main section:nth-child(2n-1) {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: calc(1.5 * var(--padding));
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: 2em;
 }
 
 section.categories {
@@ -220,12 +223,12 @@ section.whyus {
 
   &>section {
     padding: 3rem 0;
-    width: clamp(30em, calc(100vw - 2 * var(--padding)), 63em)
+    width: clamp(30em, calc(100vw - 2 * var(--padding)), 47em);
   }
 
   & .carttitle {
     margin-bottom: 2rem;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: 1.5em;
   }
 
   & h2 {
@@ -271,7 +274,6 @@ section.support {
 
   &>div {
     flex: 1;
-    font-size: clamp(1rem, 2.2vw, 1.3rem);
     letter-spacing: 3%;
 
     &:first-child {
@@ -314,7 +316,7 @@ section.support {
     border-radius: 5px;
     padding: 1em 1.5em 0.8em;
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: calc(0.9 * (clamp(1rem, 2vw, 1.5rem)));
     letter-spacing: 8%;
 
     & span {
@@ -420,6 +422,15 @@ section.support {
     --padding: 3vw;
   }
 
+  .sectionTitle,
+  .sectionLabel.shopping {
+    font-size: 1.5em;
+  }
+
+  .sectionLabel {
+    font-size: 1.2em;
+  }
+
   nav {
 
     grid-template-columns: 1fr 1fr auto;
@@ -438,11 +449,15 @@ section.support {
   .cart .carttitle {
     font-size: 1.8rem;
   }
-
-
-
 }
 
+
+@media (max-width: 600px) {
+  .cart>section {
+    padding: 3rem 0;
+    width: auto;
+  }
+}
 
 
 @media (max-width: 540px) {
