@@ -3,7 +3,6 @@
     grid-template-columns: minmax(auto, 2fr) minmax(auto, 1fr);
     grid-template-rows: auto;
     gap: 4vw;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 .cartItems {
@@ -11,7 +10,7 @@
     display: contents;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1em;
 }
 
 .summary {
