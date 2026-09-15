@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import AnimateThis from "../AnimateThis/AnimateThis";
 
-export default function Navbar({ cart }) {
+export default function Navbar({ cart, ref }) {
     function countItems() {
         let count = 0;
         Object.values(cart).forEach(item => count += item.count);
@@ -11,7 +11,7 @@ export default function Navbar({ cart }) {
     let cartCount = countItems();
 
     return (
-        <nav>
+        <nav ref={ref}>
             <Link to="/" className="brand"><h1 >Brand</h1><span className="brandtext">for joy</span>
             </Link>
             <ul>
@@ -19,7 +19,7 @@ export default function Navbar({ cart }) {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="shopping">Shopping</Link>
+                    <Link to="shopping/all">Shopping</Link>
                 </li>
                 <li>
                     <Link className="count" to="cart">Cart

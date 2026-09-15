@@ -1,10 +1,32 @@
 import styles from "./Shopping.module.css";
-import { useOutletContext } from "react-router";
+import { useOutletContext, useParams } from "react-router";
+import { useRef, useEffect, useState, useCallback } from "react";
 import Card from "../Card/Card";
 import ErrorPage from "../ErrorPage/ErrorPage";
 
+
 export default function Shopping() {
-    const { products, error, loading } = useOutletContext();
+    const { products, error, loading, nav } = useOutletContext();
+    const jeweleryRef = useRef(null);
+    const electronicsRef = useRef(null);
+    const { scroll } = useParams();
+
+
+    useEffect(() => {
+        if (!loading && !error) {
+            if (jeweleryRef.current && (scroll === "jewelery")) {
+                window.scrollTo({
+                    top: jeweleryRef.current.offsetTop - nav.current.offsetHeight,
+                })
+            }
+            if (electronicsRef.current && (scroll === "electronics")) {
+                window.scrollTo({
+                    top: electronicsRef.current.offsetTop - nav.current.offsetHeight,
+                })
+            };
+        }
+    }, []);
+
 
     if (loading) return (
         <ErrorPage error="loading prod" />
@@ -17,7 +39,7 @@ export default function Shopping() {
         <>
             <section >
                 {/*  <p className="sectionLabel">Collection</p> */}
-                <h2 className="sectionLabel shopping" >Clothing</h2>
+                <h2 id="clothing" className="sectionLabel shopping" >Clothing</h2>
                 <div
                     className={styles.cardContainer}>
                     {products
@@ -27,16 +49,16 @@ export default function Shopping() {
                     }
                 </div>
             </section>
-            <section>
-                <h2 className="sectionLabel shopping" >Jewellery</h2>
+            <section ref={jeweleryRef}>
+                <h2 id="jewelery" className="sectionLabel shopping" >Jewelery</h2>
                 <div className={styles.cardContainer}>{products.filter(item => item.category === "jewelery").map(item => <Card key={item.id} data={item} inCart={false} />)}
                 </div>
             </section>
-            <section>
+            <section ref={electronicsRef}>
                 <h2 className="sectionLabel shopping" >Electronics</h2>
                 <div className={styles.cardContainer}>{products.filter(item => item.category === "electronics").map(item => <Card key={item.id} data={item} inCart={false} />)}
                 </div>
-            </section>
+            </section >
         </>
     )
 }

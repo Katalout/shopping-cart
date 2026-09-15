@@ -53,7 +53,7 @@ export default function Cart() {
     else return (
         <section className={styles.empty}>
             <h2>Your cart is empty.</h2>
-            <Link to="../shopping">Go shopping</Link>
+            <Link to="../shopping/all">Go shopping</Link>
 
         </section>
     )
