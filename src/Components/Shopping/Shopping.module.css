@@ -5,7 +5,7 @@
     /* gap: 4vw; */
     margin-top: 1em;
 
-    grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 10em), 1fr));
     gap: 2rem;
 }
 
@@ -13,7 +13,7 @@
     .cardContainer {
         gap: 3vw;
         row-gap: 1rem;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
     }
 }
 

@@ -6,7 +6,6 @@
 }
 
 .cartItems {
-    grid-template-columns: 1;
     display: contents;
     display: flex;
     flex-direction: column;
