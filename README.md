@@ -1,10 +1,11 @@
 # Webshop demo - <a href="https://shopping-cart-chi-five-46.vercel.app/">view live</a>
 
 A modern e-commerce frontend web application built with **⚛️ React**.
-The design is **responsive** to all screen sizes between XS mobile and widescreen monitors. It aims to minimise distracting features to achieve a clean, easy-to-use shopping experience.
-Users can browse products, put them into their shopping cart, manage quantities, and review their order summary on the cart page.
-
+The design is **responsive** to all screen sizes between XS mobile and widescreen monitors.
 The project focuses on **API integration, reusable components and centralized state management**.
+
+It aims to minimise distracting features to achieve a clean, easy-to-use shopping experience.
+Users can browse products, put them into their shopping cart, manage quantities, and review their order summary on the cart page.
 
 ---
 
@@ -13,13 +14,11 @@ The project focuses on **API integration, reusable components and centralized st
 - Browse a collection of products
 - Dynamic product details fetched from an external API
 - Product quantity management
-
 - Interactive shopping cart:
- - Add and remove products
- - Change product quantities
- - Clear the entire cart with one click
- - Automatic item count and total price calculation
-
+    - Add and remove products
+    - Change product quantities
+    - Clear the entire cart with one click
+    - Automatic item count and total price calculation
 - Responsive design
 - Reusable React components
 - Cart state management with the Context API
