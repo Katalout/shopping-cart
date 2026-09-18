@@ -1,4 +1,5 @@
-# Webshop Demo - <a href="https://shopping-cart-chi-five-46.vercel.app/">view live ➦</a>
+# Webshop Demo
+**<a href="https://shopping-cart-chi-five-46.vercel.app/" target="_blank" >View Live ➦</a>**
 
 A modern e-commerce frontend web application built with **⚛️ React**.
 The design is **responsive** to all screen sizes between XS mobile and widescreen monitors.
