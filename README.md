@@ -1,4 +1,5 @@
-# Webshop demo - <a href="https://shopping-cart-chi-five-46.vercel.app/">view live</a>
+# Webshop Demo
+**<a href="https://shopping-cart-chi-five-46.vercel.app/" target="_blank" >View Live ➦</a>**
 
 A modern e-commerce frontend web application built with **⚛️ React**.
 The design is **responsive** to all screen sizes between XS mobile and widescreen monitors.
@@ -9,7 +10,7 @@ Users can browse products, put them into their shopping cart, manage quantities,
 
 ---
 
-## Features
+## ☆ Features
 
 - Browse a collection of products
 - Dynamic product details fetched from an external API
@@ -45,12 +46,12 @@ The cart supports:
 - Clearing the entire cart
 - Calculating total items and total price live
 
-### Navigation
+### 📎 Navigation
 **React Router** is used for client-side navigation between pages.
 
 ---
 
-## Tech Stack
+## 📚 Tech Stack
 Vite
 React
 React Router
@@ -72,16 +73,9 @@ src/
 
 ---
 
-## Art credits:
+## ✧ Art credits:
 
 - hero photo by <a href="https://unsplash.com/@silverkblack?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vitaly Gariev</a> on <a href="https://unsplash.com/photos/two-people-riding-in-a-shopping-cart-outside-CizrdMZFm0g?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
 - clothing category photo by <a href="https://unsplash.com/@ns157?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NS</a> on <a href="https://unsplash.com/photos/woman-in-green-hoodie-sitting-on-brown-wooden-bench-37rVmK3jY-c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
 - electronics category photo by <a href="https://unsplash.com/@_rxshxxd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rasheed Kemy</a> on <a href="https://unsplash.com/photos/man-in-train-holding-smartphone-oqY09oVTa3k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
 - jewelery category photo by <a href="https://unsplash.com/@olaszkolda?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ola szkolda</a> on <a href="https://unsplash.com/photos/two-blonde-women-in-denim-jackets-sharing-a-moment-GHYyVXNP31o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-
-
-
