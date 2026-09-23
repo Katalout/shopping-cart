@@ -66,6 +66,7 @@
         max-height: 30vh;
         background-position-y: 29%;
         aspect-ratio: .7;
+        border-radius: 0;
 
         box-shadow: inset 0px -5em 1em -2em #0000002e;
         text-shadow: 0 0 14px black;

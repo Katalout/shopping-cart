@@ -48,7 +48,6 @@
         background-color: #e5a1ab;
 
         border: none;
-        box-shadow: 4px 4px 7px -1px #aaa0a047;
         border-radius: 5px;
         width: auto;
         color: #ffffff;
@@ -182,6 +181,22 @@
     section .cartContainer {
         font-size: 1.2rem;
     }
+
+    section.cart {
+        padding: 3rem 0;
+    }
+
+    .clear {
+        background-color: #dbf7ef;
+        border: none;
+    }
+
+    .summary,
+    .clear {
+        padding: var(--padding);
+    }
+
+
 }
 
 @media (max-width: 500px) {
@@ -191,9 +206,14 @@
         & aside {
             flex-direction: column;
             align-items: stretch;
+            gap: 0;
+
+            & .summary {
+                border-radius: 0;
+            }
 
             & .clear {
-
+                border-radius: 0;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;

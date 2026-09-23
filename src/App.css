@@ -455,10 +455,9 @@ section.support {
 @media (max-width: 600px) {
   .cart>section {
     padding: 3rem 0;
-    width: auto;
+    width: 100%;
   }
 }
-
 
 @media (max-width: 540px) {
   :root {
@@ -502,7 +501,7 @@ section.support {
   }
 
   .carttitle {
-    margin: 0 1em;
+    margin: 0 var(--padding);
   }
 
   .credit {
