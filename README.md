@@ -1,5 +1,6 @@
-# Webshop Demo
-**<a href="https://shopping-cart-chi-five-46.vercel.app/" target="_blank" >View Live ➦</a>**
+# Webshop Demo - **<a href="https://shopping-cart-chi-five-46.vercel.app/" >View Live ➦</a>**
+
+<img align="right" src="/src/assets/(iPhone SE_home).png" width="350" />
 
 A modern e-commerce frontend web application built with **⚛️ React**.
 The design is **responsive** to all screen sizes between XS mobile and widescreen monitors.
@@ -8,9 +9,7 @@ The project focuses on **API integration, reusable components and centralized st
 It aims to minimise distracting features to achieve a clean, easy-to-use shopping experience.
 Users can browse products, put them into their shopping cart, manage quantities, and review their order summary on the cart page.
 
----
-
-## ☆ Features
+**☆ Features**
 
 - Browse a collection of products
 - Dynamic product details fetched from an external API

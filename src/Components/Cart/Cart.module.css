@@ -178,6 +178,12 @@
     }
 }
 
+@media (max-width: 600px) {
+    section .cartContainer {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 500px) {
     section.cart {
         padding: 3rem 0;
