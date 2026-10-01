@@ -22,7 +22,7 @@ export default function Home() {
                     <p className={styles.textOnImg}>Adventures await</p>
                     <p className={styles.textOnImg2}>Exciting new collection by our designers, limited availability.</p>
                 </div>
-                <Link className={styles.explore} to="shopping">explore</Link>
+                <Link className={styles.explore} to="shopping/all">explore</Link>
             </div>
             <section className="categories">
                 <p className="sectionLabel">What we offer</p>
